@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>practicing CSS | [7]position</title>
+  <style>
+    body {
+      height: 1000px;
+      background-color: paleturquoise;
+    }
+
+    .box-grande {
+      height: 200px;
+    }
+
+    .box-tall {
+      height: 100px;
+      width: 100px;
+    }
+
+    .box-short {
+      height: 80px;
+      width: 80px;
+    }
+
+    .red {
+      background-color: tomato;
+    }
+
+    .blue {
+      background-color: dodgerblue;
+    }
+
+    .yellow {
+      background-color: beige;
+    }
+
+    .gray {
+      background-color: gainsboro;
+    }
+
+    .box-A {
+
+      /* ----- setting to fixed position ----- */
+      /* position: fixed; */
+
+      /* left: 10px; */
+      /* top: 20px; */
+      /* bottom: 0; */
+      /* right: 0; */
+      /* top: 0; */
+
+      /* z-index: 1; */
+
+
+      /* ----- setting to relative position ----- */
+      position: relative;
+      left: 10px;
+      top: 10px;
+    }
+
+    .box-B {
+      /* ----- setting to fixed position ----- */
+      /* position: fixed; */
+      /* top: 0; */
+
+      /* z-index: 100; */
+    }
+
+    .box-A-inner {
+      position: absolute;
+      left: 10px;
+      top: 30px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="box-grande gray">
+    <div class="box-tall yellow box-A">
+      <div class="box-short red box-A-inner">element A</div>
+    </div>
+  </div>
+  <div class="box-grande gray">
+    <div class="box-tall yellow box-B">
+      <div class="box-short blue">element B</div>
+    </div>
+  </div>
+</body>
+</html>
+
+<!-- 
+note:
+attribute "relative" and "absolute" are usually used on pair.
+"relative" set to parent content and "absolute" set to child content. 
+-->

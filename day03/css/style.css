@@ -1,0 +1,26 @@
+h2 {
+  color: tomato;
+  font-size: 30px;
+}
+
+h3 {
+  color: dodgerblue;
+  font-size: 20px;
+}
+
+.yellow-font {
+  color: yellow;
+  font-size: 20px;
+}
+
+.important {
+  font-weight: bold;
+}
+
+.contents p {
+  font-size: 18px;
+}
+
+.contents > p {
+  color: tomato;
+}

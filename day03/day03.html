@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>practicing CSS</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <!-- styling by tag name -->
+  <h2>this is heading 2</h2>
+  <h3>this is heading 3</h3>
+
+  <!-- styling by class -->
+  <h2>H2 of red</h2>
+  <h2 class="yellow-font">H2 of yellow</h2>
+
+  <!-- styling by class -->
+  <p class="important">title</p>
+
+  <!-- styling by descendant selector -->
+  <article class="contents">
+    <p>descendant &lt;p&gt; tag</p>
+    <p>descendant &lt;p&gt; tag</p>
+  </article>
+
+  <!-- styling by descendant selector [directly] -->
+  <div class="contents">
+    <p>target</p>
+    <div>
+      <p>non-target</p>
+      <p>non-target</p>
+    </div>
+  </div>
+
+</body>
+</html>

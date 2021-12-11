@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>practicing CSS | [6]flex</title>
+  <style>
+    .inline-style-div {
+      background-color: ghostwhite;
+      color: white;
+      display: flex;
+      height: 300px;
+
+      /* ----- line up to horizontal ----- */
+      /* justify-content: flex-end; */
+      /* justify-content: space-evenly; */
+      /* justify-content: space-around; */
+      /* justify-content: space-between; */
+      /* align-items: flex-end; */
+
+      /* ----- line up to vertical ----- */
+      /* flex-direction: column; */
+      /* justify-content: space-between; */
+
+      flex-wrap: wrap;
+    }
+
+    .box {
+      width: 150px;
+      height: 150px
+    }
+
+    .red {
+      background-color: tomato;
+    }
+
+    .blue {
+      background-color: dodgerblue;
+    }
+
+    .green {
+      background-color: mediumaquamarine;
+    }
+  </style>
+</head>
+<body>
+  <div class="inline-style-div">
+    <div class="box red">
+    A
+    </div>
+    <div class="box blue">
+    B
+    </div>
+    <div class="box green">
+    C
+    </div>
+  </div>
+</body>
+</html>
