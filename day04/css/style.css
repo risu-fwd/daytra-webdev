@@ -1,0 +1,8 @@
+/* when mouse over the contents will slightly brighter */
+img:hover {
+  opacity: 0.7;
+}
+
+img {
+  width: 800px;
+}

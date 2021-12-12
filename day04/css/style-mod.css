@@ -1,0 +1,41 @@
+/* when mouse over the contents will slightly brighter */
+img:hover {
+  opacity: 0.1;
+}
+
+img {
+  width: 800px;
+  border-radius: 2rem;
+  box-shadow: 5px 5px 5px rgba(100, 100, 100, .8);
+}
+
+body {
+  background-color: #ddd;
+}
+
+h2 {
+  font-size: 36px;
+  color: dodgerblue;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* ---------- using Emmet ---------- */
+.hoge {
+  /* [bg#ccc] -> tab */
+  background: #000;
+
+  /* [c#fff] -> tab */
+  color: #fff;
+
+  /* [fz16] -> tab */
+  font-size: 16px;
+
+  /* [dib] -> tab */
+  display: inline-block;
+
+  /* [mb32] -> tab */
+  margin-bottom: 32px;
+
+  /* [p8-12-8-12] -> tab */
+  padding: 8px 12px 8px 12px;
+}
