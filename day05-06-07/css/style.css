@@ -6,7 +6,7 @@ html {
 }
 
 body {
-  background: linear-gradient(#ebebeb, 80%, #757575);
+  background: linear-gradient(#ffffff, 80%, #b3b3b3);
   color: #333;
   font-family: Georgia, 'Times New Roman', Times, serif;
   line-height: 1.5;
@@ -14,7 +14,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #eee;
+  color: #fff;
 }
 
 a:hover {
@@ -57,7 +57,7 @@ header
 .header {
   padding: 1rem 0;
   background-color: rgb(221, 112, 79);
-  color: #eee;
+  color: #fff;
 }
 
 .h1 {
@@ -92,12 +92,12 @@ top
 }
 
 .top-text {
-  color: #eee;
+  color: #fff;
   font-size: 3rem;
 }
 
 .top-sub-text {
-  color: #eee;
+  color: #fff;
   font-size: 1.6rem;
 }
 
@@ -171,7 +171,7 @@ input[type="email"], input[type="text"] {
   border: none;
   display: inline-block;
   background-color: rgb(96, 206, 214);
-  color: #eee;
+  color: #fff;
   font-size: 2rem;
   font-weight: bold;
   font-family: Georgia, 'Times New Roman', Times, serif;
@@ -202,17 +202,53 @@ footer
 .footer {
   padding: 1rem 0;
   background-color: rgb(221, 112, 79);
-  color: #eee;
+  color: #fff;
   height: 64px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .copyright {
   font-size: 1.6rem;
-  float: right;
-  margin-top: 2rem;
   margin-right: 2rem;
 }
 
 .credit {
   font-size: 1.4rem;
+}
+
+/*==================================================
+[responsive] celly
+==================================================*/
+@media only screen and (max-width: 767px) {
+  /*==================================================
+  common
+  ==================================================*/
+  .container {
+    width: 90%;
+    max-width: 980px;
+    margin: 0 auto;
+    /* display: flex; */
+    /* justify-content: space-between; */
+  }
+
+  /*==================================================
+  header
+  ==================================================*/
+  .header {
+    padding: 1rem 0;
+    background-color: rgb(221, 112, 79);
+    color: #fff;
+  }
+  
+  .h1 {
+    font-size: 4rem;
+    font-weight: bold;
+  }
+  
+  .main-nav-ul {
+    display: flex;
+  }
+
 }
