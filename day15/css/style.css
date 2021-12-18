@@ -1,0 +1,67 @@
+@charset "UTF-8";
+/* ==================================================
+HTML selector
+================================================== */
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background: white;
+  color: #333;
+}
+
+/* ==================================================
+custom CSS
+================================================== */
+.title {
+  font-size: 3rem;
+}
+
+.logo {
+  /* background-image: url(../img/logo_transparent.png);
+  background-size: cover;
+  background-position: right 0% bottom 65%; */
+}
+
+/* ==================================================
+header
+================================================== */
+.nav-li {
+  font-size: 2rem;
+}
+
+/* ==================================================
+top
+================================================== */
+.top-img {
+  height: 200px;
+  background: linear-gradient(rgba(255, 255, 255, 0.63), 20%, rgba(127, 127, 128, 0.522)), url("https://picsum.photos/1600/400");
+  background-size: cover;
+  background-position: right 0% bottom 65%;
+}
+
+.top-text {
+  color: white;
+  font-size: 3rem;
+  /* text-align: center; */
+  padding-top: 5rem;
+}
+
+.top-sub-text {
+  color: white;
+  font-size: 2rem;
+  /* text-align: center; */
+}
+
+/* ==================================================
+about
+================================================== */
+.about-pict {
+  width: 100%;  
+}
+
+.about-desc {
+  font-size: 1.6rem;
+}

@@ -15,13 +15,15 @@
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous"
     />
-    <link rel="icon" href="favicon.ico" />
+
+    <link rel="icon" href="favicon.png" />
     <style>
       @import url("css/style.css");
     </style>
-    <title>daily-trial day12</title>
+    <title>daily-trial day13</title>
   </head>
   <body>
+    <!-- navi -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
         <a class="navbar-brand" href="#">Navbar</a>
@@ -36,7 +38,11 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarSupportedContent"
+        >
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
               <a class="nav-link" href="#"
@@ -73,41 +79,44 @@
       </div>
     </nav>
 
-    <section class="top py-5 text-danger">
-      <div class="container py-5">
-        <h1 class="text-center display-3 font-weight-bold mb-3">Bootstrap</h1>
-        <p class="text-center lead">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo
-          consectetur repellat deleniti sapiente maiores enim.
+    <!-- header -->
+    <header class="header cl-cyan text-center py-5 mb-5">
+      <div class="container">
+        <h1 class="display-4">Bootstrap</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto earum
+          numquam cumque, ipsa quibusdam molestiae?
         </p>
       </div>
-    </section>
+    </header>
 
-    <section class="about py-5">
-      <div class="container">
+    <!-- about -->
+    <section class="about">
+      <div class="container mb-5">
         <div class="row">
           <div class="col-md-6 mb-5">
-            <h2>ABOUT</h2>
+            <h2 class="text-shadow">ABOUT</h2>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni
-              accusamus perferendis quos sed unde numquam praesentium optio,
-              earum autem. Fugiat.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+              nulla in eveniet quas autem omnis mollitia, praesentium rem saepe
+              provident?
             </p>
-            <button class="btn btn-danger btn-lg">Read More</button>
+            <button class="btn btn-lg btn-danger">Read More</button>
           </div>
           <div class="col-md-6">
-            <img class="eye-catcher" src="img/ppl-lg.png" alt="ppl" />
+            <img src="img/pict-lg.png" alt="snow-man" class="pict pict-round" />
           </div>
         </div>
       </div>
     </section>
 
-    <section class="service bg-light py-5">
+    <!-- service -->
+    <section class="service bg-snow-blue pb-5">
       <div class="container">
-        <h2 class="text-center mb-3">Service</h2>
+        <h2 class="text-center py-3 text-shadow">Service</h2>
         <div class="card-deck">
           <div class="card">
-            <img src="img/ppl1.jpg" alt="ppl" class="pict" />
+            <img src="img/pict1.png" alt="pict1" class="pict-sm" />
             <div class="card-body">
               <h5 class="card-title text-center">Beginner</h5>
               <p class="card-text">
@@ -121,7 +130,7 @@
             </div>
           </div>
           <div class="card">
-            <img src="img/ppl2.png" alt="pp2" class="pict" />
+            <img src="img/pict2.png" alt="pict2" class="pict-sm" />
             <div class="card-body">
               <h5 class="card-title text-center">Standard</h5>
               <p class="card-text">
@@ -134,9 +143,9 @@
             </div>
           </div>
           <div class="card">
-            <img src="img/ppl3.jpg" alt="ppl" class="pict" />
+            <img src="img/pict3.png" alt="pict3" class="pict-sm" />
             <div class="card-body">
-              <h5 class="card-title text-center">Advance</h5>
+              <h5 class="card-title text-center">Professional</h5>
               <p class="card-text">
                 This is a wider card with supporting text below as a natural
                 lead-in to additional content. This card has even longer content
@@ -151,15 +160,16 @@
       </div>
     </section>
 
-    <section class="plans py-5">
-      <div class="container">
-        <h2 class="text-center mb-3">Plans</h2>
+    <!-- plans -->
+    <section class="plans">
+      <div class="container mb-5">
+        <h2 class="text-center py-3 text-shadow">Plans</h2>
         <div class="card-deck">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title text-center">Beginner</h5>
               <ul class="list-group">
-                <li class="list-group-item display-4 ice-blue text-center text-white">$25</li>
+                <li class="list-group-item display-5 card-dark">$25</li>
                 <li class="list-group-item">Dapibus ac facilisis in</li>
                 <li class="list-group-item">Morbi leo risus</li>
                 <li class="list-group-item">Porta ac consectetur ac</li>
@@ -167,11 +177,12 @@
               </ul>
             </div>
           </div>
+
           <div class="card">
             <div class="card-body">
               <h5 class="card-title text-center">Standard</h5>
               <ul class="list-group">
-                <li class="list-group-item display-4 ice-blue text-center text-white">$50</li>
+                <li class="list-group-item display-5 card-dark">$50</li>
                 <li class="list-group-item">Dapibus ac facilisis in</li>
                 <li class="list-group-item">Morbi leo risus</li>
                 <li class="list-group-item">Porta ac consectetur ac</li>
@@ -179,11 +190,12 @@
               </ul>
             </div>
           </div>
+
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title text-center">Advance</h5>
+              <h5 class="card-title text-center">Professional</h5>
               <ul class="list-group">
-                <li class="list-group-item display-4 ice-blue text-center text-white">$75</li>
+                <li class="list-group-item card-dark">$75</li>
                 <li class="list-group-item">Dapibus ac facilisis in</li>
                 <li class="list-group-item">Morbi leo risus</li>
                 <li class="list-group-item">Porta ac consectetur ac</li>
@@ -195,40 +207,67 @@
       </div>
     </section>
 
-    <section class="contact py-5 bg-light">
-      <h2 class="mb-3 text-center">Contact</h2>
-      <div class="container">
+    <!-- contact -->
+    <section class="contact bg-snow-blue">
+      <div class="container pb-5 pos-center">
+        <h2 class="text-center py-3 text-shadow">Contact</h2>
         <form>
           <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            <input
+              type="email"
+              class="form-control width-mid"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Enter email"
+            />
+            <small id="emailHelp" class="form-text text-muted"
+              >We'll never share your email with anyone else.</small
+            >
           </div>
           <div class="form-group">
-            <div class="row mb-3">
-              <div class="col">
-                <label for="first-name">First name</label>
-                <input type="text" class="form-control" placeholder="First name" id="first-name">
-              </div>
-              <div class="col">
-                <label for="last-name">Last name</label>
-                <input type="text" class="form-control" placeholder="Last name" id="last-name">
-              </div>
-            </div>
+            <label for="exampleInputPassword1">Password</label>
+            <input
+              type="password"
+              class="form-control width-mid"
+              id="exampleInputPassword1"
+              placeholder="Password"
+            />
           </div>
           <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            <input
+              type="checkbox"
+              class="form-check-input fixed-height"
+              id="exampleCheck1"
+            />
+            <label class="form-check-label fixed-height" for="exampleCheck1"
+              >Check me out</label
+            >
           </div>
-          <button type="submit" class="btn btn-outline-danger btn-lg">Submit</button>
+          <button type="submit" class="btn btn-cyan btn-lg pos-center">
+            Submit
+          </button>
         </form>
       </div>
     </section>
-    <footer class="py-3 ice-blue">
-      <div class="container">
-        <p class="text-danger text-right m-0">Bootstrap</p>
+
+    <!-- footer -->
+    <footer>
+      <div class="bg-azure py-3 d-flex justify-content-between">
+        <span class="cl-white mx-4"
+          >Special Thanks:
+          <a href="https://design-data.jp/about/" class="cl-white"
+            >ROLAchan</a
+          ></span
+        >
+        <span class="text-right bg-azure cl-white m-0 font-weight-bold mx-4"
+          ><a href="https://getbootstrap.jp/docs/4.5/" class="cl-white"
+            >Bootstrap</a
+          ></span
+        >
       </div>
     </footer>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
