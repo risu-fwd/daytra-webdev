@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      /* basic */
+      body {
+        background-color: #333;
+        color: #ddd;
+        color: black;
+      }
+
+      /* colors */
+      .cl-ice-blue {
+        background-color: rgb(221, 243, 255);
+      }
+
+      .cl-green {
+        background-color: mediumaquamarine;
+      }
+
+      .cl-red {
+        background-color: lightcoral;
+      }
+
+      .cl-dark-gray {
+        background-color: #555;
+      } 
+
+      /* position */
+      .box {
+        width: 160px;
+        height: 120px;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      .margin-center {
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- inline -->
+      <nav class="box margin-center cl-ice-blue">nav</nav>
+      <br />
+      <span class="box text-center cl-green">span</span>
+
+      <ul class="box margin-center">
+        <li class="box text-center cl-ice-blue">list</li>
+        <li>list</li>
+        <li>list</li>
+      </ul>
+
+      <!-- block -->
+      <div class="cl-dark-gray">
+        <h2 class="box margin-center cl-green">heading</h2>
+        <br />
+        <div class="box margin-center cl-ice-blue">divide</div>
+      </div>
+    </div>
+  </body>
+</html>

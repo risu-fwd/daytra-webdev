@@ -1,0 +1,20 @@
+
+// lorem picsum
+background-image: url("https://picsum.photos/1600/900");
+
+// background-image -> cover, image position
+background-image: url(../img/day14.png);
+background-size: cover;
+background-position: right 0% bottom 10%;
+
+--------------------------------------------------------------------------------
+// 画像のポップアップ表示
+// ヘッダタグ内に以下のCDNを記述
+<link rel="stylesheet" href="css/lity.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="js/lity.min.js"></script>
+
+// HTMLに以下を記述
+<p><a href="images/sample.jpg" data-lity="data-lity">サンプル画像を表示</a></p>
+
+--------------------------------------------------------------------------------
