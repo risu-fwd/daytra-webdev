@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <title>daily-trial | day03</title>
+  <style>
+    /* ==================================================
+    html selector
+    ================================================== */
+    html {
+      font-size: 10px;
+    }
+
+    body {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 1.6rem;
+      background-color: #333;
+      color: #ddd;
+      line-height: 1.5;
+    }
+
+    a {
+      color: dodgerblue;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: lightblue;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 4rem;
+      margin: 3rem;
+      text-shadow: 5px 5px 5px black;
+    }
+
+    h2 {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 2rem;
+    }
+
+    /* ==================================================
+    id class selector
+    ================================================== */
+    #wrapper {
+      width: 60%;
+      margin: 0 auto;
+
+      text-align: center;
+    }
+
+    #btn-section {
+      margin-top: 2rem;
+    }
+
+    .btn-login {
+      background-color: tomato;
+      color: white;
+      padding: 1rem 3rem;
+      border: none;
+      border-radius: .6rem;
+    }
+
+    .btn-login:hover {
+      background-color: red;
+    }
+
+    .btn {
+      padding: 1rem 3rem;
+      border: none;
+      border-radius: .6rem;
+    }
+
+    .btn-regis {
+      background-color: dodgerblue;
+      color: white;
+    }
+
+    .btn-regis:hover {
+      background-color: blue;
+    }
+
+    .btn-lower {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      background-color: mediumaquamarine;
+      color: white;
+    }
+    
+    .btn-lower:hover {
+      background-color: green;
+    }
+    
+  </style>
+</head>
+<body>
+  <header>
+    <h1>- JavaScript Lesson day03 -</h1>
+  </header>
+  <main>
+    <div id="wrapper">
+      <h2 id="title">30days trial</h2>
+      <p class="lead">Lorem ipsum dolor sit amet.</p>
+      <p class="lead">Lorem ipsum dolor sit amet.</p>     
+      <div id="btn-section">
+        <a href="https://tokyofreelance.jp/" id="register" class="btn btn-regis">register</a>
+        <button id="btn-lower" class="btn btn-lower">click me!</button>
+      </div>
+    </div>
+  </main>
+  <footer>
+  </footer>
+
+  <script>
+    // helper
+    function log(arg) { console.log(arg) }
+    
+    // lesson01 ========== get element ==========
+    // let title_text = document.getElementById('title').outerHTML
+    let title_element = document.getElementById('wrapper').outerHTML
+    // window.alert(title_element)
+    let lead_text = document.getElementsByClassName('lead')[0].innerText
+    log(lead_text)
+    let tag_name = document.getElementsByTagName('a')[0].innerText
+    log(tag_name)
+
+    // lesson02 ========== changing text ==========
+    document.getElementsByTagName('p')[1].innerText = 'Hello, JavaScript!'
+
+    // lesson03 ========= adding HTML element ==========
+    const login_btn = document.createElement('a')
+    login_btn.innerText = 'login'
+    // login_btn.setAttribute('id', 'login')
+    // login_btn.setAttribute('class', 'btn')
+    login_btn.setAttribute('href', 'https://tokyofreelance.jp/')
+    login_btn.classList.add('btn-login')
+    document.getElementById('btn-section').appendChild(login_btn)
+
+    // lesson04 ========= controlling button ==========
+    // document.getElementById('register').click()
+
+    // lesson04 ========= observation event(onload) ==========
+    window.onload = function() {
+      document.getElementsByClassName('lead')[0].innerText = 'The quick brown fox jumps over the lazy dog'
+    }
+
+    // lesson04 ========= observation event(click) ==========
+    document.getElementById('btn-lower').addEventListener('click', function() {
+      log('hello, again!');
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+@charset "UTF-8";
+/* ==================================================
+HTML selector
+================================================== */
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background: white;
+  color: #333;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin: 3rem;
+}
+/* ==================================================
+custom CSS
+================================================== */
+a {
+  color: #333;
+}
+
+a:hover {
+  color: #333;
+  text-decoration: none;
+}

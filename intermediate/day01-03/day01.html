@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>daily-trial | day01</title>
+</head>
+<body>
+  <h1>- JavaScript Lesson day01 -</h1>
+  <script>
+    // helper method
+    function log(arg) {
+       console.log(arg)
+    }
+
+    // 1. string output
+    console.log('Hello, world!')
+    console.log('John' + 'Doe')
+
+    // 2. calculate
+    log(123 + 456)
+    log(22 - 8)
+    log(3 * 5)
+    log(12 / 3)
+    log(24 % 7)
+
+    // 3-1. variable
+    let score = 96
+    log(score)
+    score = 23
+    log(score)
+    log(score * 2)
+    let scoreA = score * 2
+    let message = 'MESSAGE'
+    log(message)
+    const a = 123
+    log(a)
+
+    // 3-2. template literal
+    let name = 'Joe'
+    log('hell, ' + name)
+    log(`hello ${name}`)
+
+    // 4-1. function
+    function calCircleArea(radius) {
+      return radius * radius * Math.PI
+    }
+
+    log(calCircleArea(20))
+
+    const hello = function () {
+      log('hello, again!')
+    }
+
+    hello()
+
+    const greetings = (name) => {
+      log(`hello, ${name}!`)
+    }
+
+    greetings('Matilda')
+
+    // 4-2. function advanced
+    function concatenate(str1, str2) {
+      return str1 + ' ' + str2
+    }
+
+    log(concatenate('John', 'Doe'))
+
+    // scope
+    let num
+    function setNum() {
+      num = 100
+    }
+
+    setNum()
+    log(num)
+
+    // 5-1. if statement part1
+    if(true) { log('true') }
+    if(false) { log('false') }
+
+    score = 89
+    if(score > 70) log('good job!')
+    if(score > 90) log('excellent!')
+    if(score >= 89) log('superb!')
+
+    if(score <= 89) log('not bad')
+    if(score === 89) log('same')
+    if(score !== 60) log('not same')
+
+    // 5-2. if statement part2
+    if(score > 20 && score < 90) { log('bruh')}
+    if(score === 0 || score === 89) { log('bruh')}
+
+    if(score > 89) {
+      log('very good!')
+    } else {
+      log('hang in there!')
+    }
+
+    score = 10
+    if(score > 90) {
+      log('A')
+    } else if(score > 50) {
+      log('B')
+    } else {
+      log('C')
+    }
+
+    score = 89
+    if(score > 40) {
+      if(score > 90) {
+        log('awesome!')
+      } else {
+        log('good')
+      }
+    }
+
+    // 6 switch statement
+    switch(score) {
+      case 10:
+        log('10')
+        break
+      case 20:
+        log('20')
+        break
+      case 89:
+        log('89')
+        break
+    }
+  </script>
+</body>
+</html>

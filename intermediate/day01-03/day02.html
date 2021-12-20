@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>daily-trial | day03</title>
+</head>
+<body>
+  <h1>- JavaScript Lesson day02 -</h1>
+  <script>
+    // helper method
+    function log(arg) { console.log(arg) }
+
+    // 1. array
+    let arr = [10, 20, 30]
+    log(arr[2])
+
+    arr[2] = 300
+    log(arr[2])
+
+    arr.push(40)
+    log(arr[3])
+
+    arr.push('hello')
+    log(arr[4])
+
+    log(arr.length)
+
+    arr.pop()
+    log(arr)
+
+    log(arr.shift())
+    log(arr)
+
+    // 2-1. object
+    const fruits = {
+      apple: 'red',
+      banana: 'yellow',
+      cinnamon: 'brown'
+    }
+
+    log(fruits)
+    log(fruits.banana)
+    log(fruits['apple'])
+
+    fruits.cinnamon = 'light brown'
+    log(fruits.cinnamon)
+
+    const allScores = {
+      math: {
+        student1: 100,
+        student2: 40,
+        student3: 67
+      },
+      science: {
+        student1: 40,
+        student2: 50,
+        student3: 77
+      },
+      english: {
+        student1: 89,
+        student2: 78,
+        student3: 56
+      }
+    }
+
+    log(allScores.english.student2)
+    log(allScores.science)
+
+    // 2-2. object advance
+    let obj = {
+      math: 20,
+      message: function () { log('this is message!') },
+      science: 40
+    }
+
+    obj.message()
+
+    const user = {
+      firstName: 'taro',
+      lastName: 'yamada',
+      fullname: function () {
+        return `${this.lastName} ${this.firstName}`
+      },
+      sayHi: function() {
+        return 'Hi! ' + this.fullname()
+      }
+    }
+
+    log(user.fullname())
+    log(user.sayHi())
+
+    // 3. for statement
+    const numbers = [1, 2, 3, 44, 55]
+    for(let num of numbers) log(num)
+
+    for(let i=0; i<numbers.length; i++) log(numbers[i])
+
+    numbers.forEach(function(num) {
+      log(num)
+    })
+  </script>
+</body>
+</html>
