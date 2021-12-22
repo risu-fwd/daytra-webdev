@@ -12,6 +12,7 @@ body {
   color: #333;
   font-size: 2rem;
   line-height: 1.5;
+  /* height: 1000px; */
 }
 
 h1 {
@@ -96,19 +97,27 @@ input[type='text'] {
   text-align: center;
 }
 
-#js-for-web {
-  margin-top: 3rem;
+.main-nav {
+  float: right;
+  display: flex;
 }
 
-#tgt-text {
-  margin-top: 3rem;
+.nav-li {
+  margin-right: 3rem;
 }
 
-#lesson04-area {
-  margin-top: 3rem;
+#toggle-area {
+  float: right;
+  position: relative;
+  top: 3rem;
+  right: -17rem;
 }
 
-#tgt-text02 {
-  margin: 0 auto;
-  width: 200px;
+#top-btn {
+  background-color: #333;
+  color: #ddd;
+  font-size: 2rem;
+  position: fixed;
+  right: 3rem;
+  bottom: 6rem;
 }

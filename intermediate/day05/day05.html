@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <title>daily-trial | day05</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>- jQuery Lesson day05 -</h1>
+        <nav>
+          <ul class="main-nav">
+            <li class="nav-li">about</li>
+            <li class="nav-li" id="course-list">course</li>
+            <li class="nav-li">contact</li>
+          </ul>
+        </nav>
+        <div id="toggle-area">
+          <ul>
+            <li>beginner</li>
+            <li>intermediate</li>
+            <li>expert</li>
+          </ul>
+        </div>
+      </header>
+
+      <div class="main">
+      </div>
+
+      <footer class="footer"></footer>
+    </div>
+
+    <button id="top-btn" class="btn">top</button>
+    <script>
+      // helper method
+      function log(arg) {
+        console.log(arg);
+      }
+
+      $(function () {
+        $('#toggle-area').hide();
+        // ----- lesson01 -----
+        $('#course-list').click(
+          function() {
+            $('#toggle-area').toggle();
+          }
+        );
+
+        let topBtn = $('#top-btn');    
+        topBtn.hide();
+ 
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 80) {
+                topBtn.fadeIn();
+            } else {
+                topBtn.fadeOut();
+            }
+        });
+
+        topBtn.click(function () {
+            $('body, html').animate({
+                scrollTop: 0
+            }, 500);
+            return false;
+        });
+ 
+      });
+    </script>
+  </body>
+</html>
