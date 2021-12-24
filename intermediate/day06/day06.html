@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <title>daily-trial | day06</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h2 class="title">jQuery Lesson day06</h2>
+      </header>
+
+      <div class="main">
+        <div class="course-area">
+          <div id="img00" class="pict" onclick="openModal(this)"><p class="caption">HTML / CSS / Bootstrap</p></div>
+
+          <div id="img01" class="pict" onclick="openModal(this)"><p class="caption">HTML / CSS / JavaScript / jQuery</p></div>
+          
+          <div id="img02" class="pict" onclick="openModal(this)"><p class="caption">PHP / WordPress</p></div>
+        </div>
+      </div>
+
+      <footer class="footer">
+      </footer>
+    </div>
+
+    <div id="overlay" class="overlay">
+      <div id="bigPict" class="modal"></div>
+    </div>
+    
+    <script>
+      // helper method
+      function log(arg) {
+        console.log(arg);
+      }
+
+      function plusHashMark(elements) {
+        return '#' + elements.id;
+      }
+
+      function openModal(elements) {
+        $(plusHashMark(elements)).click(function() {
+          removePict();
+          $('#bigPict').addClass(`${elements.id} pictBase`);
+          $('#overlay, #bigPict').fadeIn();
+        });
+      }
+
+      function removePict() {
+        $('#bigPict').removeClass("pictBase");
+        $('#bigPict').removeClass("img00");
+        $('#bigPict').removeClass("img01");
+        $('#bigPict').removeClass("img02");
+      }
+      
+      $(function () {
+        $('#overlay').click(function() {
+          $('#modal, #overlay').fadeOut();
+        });
+      });
+    </script>
+  </body>
+</html>
