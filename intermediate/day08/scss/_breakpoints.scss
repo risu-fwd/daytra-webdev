@@ -1,0 +1,15 @@
+/* ==================================================
+break point for media query
+================================================== */
+$breakpoints: (
+  'sp' : 'screen and (max-width: 767px)', // for celly
+  'pc' : 'screen and (max-width: 768px)' // for PC 
+ ) !default;
+
+// --- mixin using on media query ---
+@mixin mq($breakpoint: sp) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+

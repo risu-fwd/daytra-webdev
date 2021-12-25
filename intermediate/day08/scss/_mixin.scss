@@ -1,0 +1,29 @@
+/* ==================================================
+mixin
+================================================== */
+@mixin btn-mixin($font-size) {
+  color: #555;
+  font-size: $font-size; // using argument
+  display: inline-block;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+@mixin pict($width, $height) {
+  width: $width;
+  height: $height;
+  border-radius: 1rem;
+  margin-bottom: $section-margin;
+  box-shadow: 5px 5px 5px rgba(128, 128, 128, 0.5);
+  
+  &:hover {
+    opacity: .5;
+    cursor: pointer;
+  }
+
+  @include mq('sp') {
+    width: 90%;
+    // height: 60px;
+    margin: 0 auto;
+  }
+}

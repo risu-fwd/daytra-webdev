@@ -1,0 +1,33 @@
+.header {
+  background-color: rgb(238, 238, 238);
+  padding: 3rem;
+  display: flex; //
+  justify-content: space-around;
+
+  @include mq('sp') {
+    padding: 2rem;
+    background-color: salmon;
+  }
+
+  // @include mq('pc') {
+  //   height: 200px;
+  //   background-color: aquamarine;
+  // }
+
+
+}
+
+.main-nav {
+  display: flex;
+  align-content: space-around;
+}
+
+.main-nav-li {
+  display: inline-block;
+}
+
+.title {
+  // text-align: center;
+  // font-size: 4rem;
+  // text-shadow: 5px 5px 5px gray;
+}

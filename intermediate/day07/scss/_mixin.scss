@@ -1,0 +1,10 @@
+/* ==================================================
+mixin
+================================================== */
+@mixin btn-mixin($font-size) {
+  color: #555;
+  font-size: $font-size; // using argument
+  display: inline-block;
+  padding: 8px 16px;
+  text-decoration: none;
+}

@@ -1,0 +1,186 @@
+/* ==================================================
+variables
+================================================== */
+/* ==================================================
+break point for media query
+================================================== */
+/* ==================================================
+mixin
+================================================== */
+/* ==================================================
+function
+================================================== */
+/* ==================================================
+HTML selector
+================================================== */
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background: white;
+  color: #333;
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 4rem;
+  text-align: center;
+  text-shadow: 5px 5px 5px #cacaca;
+}
+
+.header {
+  background-color: #eeeeee;
+  padding: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    padding: 2rem;
+    background-color: salmon;
+  }
+}
+
+.main-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+}
+
+.main-nav-li {
+  display: inline-block;
+}
+
+/* ==================================================
+for extends
+================================================== */
+.btn, .lists li {
+  color: #333;
+  font-size: 1.6rem;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 3rem;
+}
+
+/* ==================================================
+custom CSS
+================================================== */
+.header {
+  background-color: #eeeeee;
+  padding: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    padding: 2rem;
+    background-color: salmon;
+  }
+}
+
+.main-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+}
+
+.main-nav-li {
+  display: inline-block;
+}
+
+.footer {
+  background-color: #eeeeee;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100vh;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.lists {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.lists li {
+  width: 25%;
+  width: 200px;
+  text-align: center;
+  display: block;
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s;
+  border-radius: .5rem;
+  line-height: 1.8rem;
+}
+
+.lists li:hover {
+  -webkit-transform: translate(-3px, -3px);
+          transform: translate(-3px, -3px);
+  -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  background-color: white;
+}
+
+.lists li:hover a {
+  color: lightcoral;
+}
+
+.lists li a {
+  color: #555;
+  font-size: 3rem;
+  display: inline-block;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.lists li a.active {
+  color: lightcoral;
+  font-size: 4.6rem;
+}
+/*# sourceMappingURL=style.css.map */

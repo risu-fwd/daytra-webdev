@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+// @import './variables';
+@import 'variables';
+@import 'breakpoints';
+@import 'mixin';
+@import 'functions';
+@import 'common';
+@import 'header';
+@import 'button';
+
+/* ==================================================
+custom CSS
+================================================== */
+@import './header';
+
+.footer {
+  background-color: rgb(238, 238, 238);
+}
+
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.lists {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+
+  li {
+    width: 25%;
+    width: 200px;
+    text-align: center;
+    display: block;
+    transition-duration: .3s;
+    border-radius: .5rem;
+    line-height: 1.8rem;
+    @extend .btn;
+
+    &:hover {
+      transform: translate(-3px, -3px);
+      box-shadow: 3px 3px 5px rgba(0, 0, 0, .5);
+      cursor: pointer;
+      background-color: rgb(255, 255, 255);
+
+      a {
+        color: lightcoral;
+      }
+    }
+
+    a {
+      @include btn-mixin(3rem);
+
+      &:hover {
+        // color: $link-color-active;
+      }
+
+      &.active {
+        color: $link-color-active;
+        font-size: $link-font-size + 3rem;
+      }
+    }
+  }
+}
+

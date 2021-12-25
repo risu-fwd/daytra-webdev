@@ -1,0 +1,22 @@
+/* ==================================================
+HTML selector
+================================================== */
+html {
+  // font-size: 10px;
+  font-size: $base-font-size;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background: white;
+  // color: #333;
+  color: #777;
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+// h1 {
+//   font-size: 4rem;
+//   text-align: center;
+//   text-shadow: 5px 5px 5px rgb(202, 202, 202);
+// }
