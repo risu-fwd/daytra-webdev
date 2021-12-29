@@ -1,10 +1,10 @@
 # daytra-webdev
 
 # beginner
-  day02
-    HTML basics
-  day03
-    CSS basics
+  day02  
+    HTML basics  
+  day03  
+    CSS basics  
   day04
     Using Emmet (Question and answer - Generate multiple list tags)
   day05-07
