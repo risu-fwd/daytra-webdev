@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <title>daily-trial | day08</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h2 class="title">Sass | Lesson day08</h2>
+        <nav>
+          <ul class="main-nav">
+            <li class="main-nav-li"><a href="#about">About</a></li>
+            <li class="main-nav-li"><a href="#course">Course</a></li>
+            <li class="main-nav-li"><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div class="main">
+        <section class="top">
+          <h2 class="section-title">- Top -</h2>
+          <p class="top-desc00">Lorem ipsum, dolor sit amet consectetur <br> adipisicing elit. Ab, eveniet.</p>
+          <p class="top-desc01">Lorem ipsum dolor sit amet consectetur, <br>  adipisicing elit. Non, similique!</p>
+        </section>
+        <section class="about" id="about">
+          <h2 class="section-title">- About -</h2>
+          <div class="about-area">
+            <div class="about-pict">
+            </div>
+            <p class="about-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe recusandae quam numquam eos aliquam commodi adipisci labore iusto dolorum voluptatibus perferendis quo iure molestiae distinctio at accusantium dicta neque sequi, nobis temporibus ad maiores. Eum explicabo repudiandae ab incidunt consequuntur!</p>
+          </div>
+        </section>
+        <section class="course" id="course">
+          <h2 class="section-title">- Course -</h2>
+          <div class="course-area">
+            <div class="course-pict00"><div class="pict-desc">HTML / CSS / Bootstrap</div></div>
+            <div class="course-pict01"><div class="pict-desc">HTML / CSS / JavaScript / jQuery</div></div>
+            <div class="course-pict02"><div class="pict-desc">PHP / WordPress</div></div>
+          </div>
+        </section>
+
+        <section class="contact" id="contact">
+          <h2 class="section-title">- Contact -</h2>
+          <div class="contact-area">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <form action="#">
+              <input type="text" class="contact-input">
+              <br>
+              <button class="contact-btn">trial</button>
+            </form>
+          </div>
+        </section>
+      </div>
+
+      <footer class="footer">
+        <p class="copyright">Copyright(C) 2021 Tokyo Freelance All Rights Reserved.</p>
+      </footer>
+    </div>
+    
+    <script>
+      
+      $(function () {
+        // helper method
+        function log(arg) {
+          console.log(arg);
+        }
+      });
+    </script>
+  </body>
+</html>
