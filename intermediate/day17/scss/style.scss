@@ -5,6 +5,7 @@
 @import 'mixin';
 
 @import 'price-section';
+@import 'access-section';
 
 /* ==================================================
 custom CSS
@@ -307,7 +308,3 @@ custom CSS
   margin-top: 14px;
 }
 
-.access__map {
-  width: 800px;
-  margin: 0 auto;
-}
