@@ -1,9 +1,20 @@
 /* ==================================================
 variables
 ================================================== */
-$base-font-size: 10px;
-// $link-color-active: #da1e32;
-$link-color-active: lightcoral;
-$link-color-base: #333;
-$link-font-size: 1.6rem;
-$section-margin: 3rem;
+
+// variables
+$cl-main: #3F51B5;
+$cl-accent: #E81919;
+$cl-text: #333333;
+
+$layout-width-inner: 1200px;
+
+// breakpoint
+$breakpoints: (
+// key : value
+  'sp': "(max-width: 767px)", 
+  'tab': "(min-width: 768px) and (max-width: #{$layout-width-inner - 1px})", 
+  'pc': "(min-width: #{$layout-width-inner})"
+) !default;
+
+

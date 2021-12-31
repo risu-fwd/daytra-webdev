@@ -1,0 +1,114 @@
+@charset "UTF-8";
+/* ==================================================
+HTML selector
+================================================== */
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background: white;
+  color: #333;
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 4rem;
+  text-align: center;
+  text-shadow: 5px 5px 5px gray;
+}
+
+/* ==================================================
+custom CSS
+================================================== */
+a {
+  color: #333;
+}
+
+a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.header {
+  background-color: rgb(247, 247, 247);
+  /* height: 80px; */
+  padding: 3rem;
+}
+
+.footer {
+  background-color: rgb(247, 247, 247);
+  height: 40px;
+  bottom: 0;
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.main {
+  height: 800px;
+  padding: 2rem;
+}
+
+.btn {
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: .5rem;
+  text-decoration: none;
+  margin: 1rem .2rem;
+}
+
+.btn:hover {
+  opacity: .5;
+}
+
+.btn-blue {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.btn-gray {
+  background-color: gray;
+  color: white;
+}
+
+.btn-red {
+  background-color: tomato;
+  color: white;
+}
+
+.login-area {
+  margin-top: 3rem;
+}
+
+input[type='text'] {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 2rem;
+  color: #333;
+  border: 1px solid gainsboro;
+  padding: 1rem 2rem;
+  border-radius: .5rem;
+  text-align: center;
+}
+
+#js-for-web {
+  margin-top: 3rem;
+}
+
+#tgt-text {
+  margin-top: 3rem;
+}
+
+#lesson04-area {
+  margin-top: 3rem;
+}
+
+#tgt-text02 {
+  margin: 0 auto;
+  width: 200px;
+}

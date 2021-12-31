@@ -1,0 +1,154 @@
+@charset "UTF-8";
+
+@import 'basic';
+@import 'variables';
+@import 'mixin';
+
+/* ==================================================
+custom CSS
+================================================== */
+$cl-text: #555;
+
+.inner {
+  width: 800px;
+  margin: 0 auto;
+  // text-align: center;
+  padding: 3rem;
+  font-size: 3rem;
+  // background: aqua;
+}
+
+.title {
+  margin-top: 5rem;
+  font-size: 4rem;
+  font-weight: 700;
+  padding-bottom: 1rem;
+
+  position: relative;
+  display: block;
+  width: fit-content;
+  // background-color: gainsboro;
+  margin: 0 auto;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 100px;
+    transform: translate(0, 100%);
+    top: 3rem;
+    left: 3rem;
+    border-bottom: 3px solid darkblue;
+    width: 5rem;
+  }
+}
+
+.news-item {
+
+  display: flex;
+  font-size: 1.6rem;
+  color: $cl-text;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid gainsboro;
+  width: 800px;
+  margin-top: 2rem;
+  // background: rgba(224, 224, 224, 0.479);
+}
+
+.day {
+  height: 3rem;
+  // background-color: gainsboro;
+  width: 9rem;
+  padding-top: 3px;
+}
+
+.label {
+  display: inline-block;
+  color: white;
+  font-weight: bold;
+  padding: .3rem 2rem;
+  border-radius: .5rem;
+  margin: 0 2rem;
+  height: 3rem;
+  cursor: pointer;
+
+  &:hover {
+    opacity: .8;
+    color: yellow;
+  }
+}
+
+.label3 {
+  background: tomato;
+
+  &::before {
+    content : "label3";
+  }
+}
+
+.label2 {
+  background: dodgerblue;
+
+  &::before {
+    content : "label2";
+  }
+}
+
+.label1 {
+  background: gray;
+
+  &::before {
+    content : "label1";
+  }
+}
+
+.news-text {
+  padding-top: 3px;
+  display: inline-block;
+  width: 500px;
+  // background: gainsboro;
+
+  a {
+    text-decoration: none;
+    display: block;
+
+    &:hover {
+      color: royalblue;
+      text-decoration: underline;
+    } 
+  }
+}
+
+.more {
+  margin-top: 6rem;
+  color: tomato;
+  font-size: 2rem;
+  position: relative;
+  // text-align: center;
+  width: 50px;
+  // background: mediumaquamarine;
+  margin: 6rem auto;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 40%;
+    right: -15px;
+    transform: translate(0, 0);
+    background: url(../img/news-arrow.png) no-repeat center center / contain;
+  }
+
+  a {
+    // background: gainsboro;
+    display: block;
+    text-decoration: none;
+
+    &:hover {
+      color: red;
+      text-decoration: underline;
+      border-radius: 3rem;
+    }
+  }
+}

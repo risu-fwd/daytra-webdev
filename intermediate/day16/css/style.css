@@ -1,0 +1,200 @@
+@charset "UTF-8";
+/* ==================================================
+basic
+================================================== */
+html {
+  font-size: 10px;
+}
+
+/* ==================================================
+variables
+================================================== */
+body {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+  background: #fff;
+  color: #333333;
+  height: 2000px;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+}
+
+/* ==================================================
+variables
+================================================== */
+/* ==================================================
+custom CSS
+================================================== */
+.inner {
+  width: 800px;
+  margin: 0 auto;
+  padding: 3rem;
+  font-size: 3rem;
+}
+
+.title {
+  margin-top: 5rem;
+  font-size: 4rem;
+  font-weight: 700;
+  padding-bottom: 1rem;
+  position: relative;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 100px;
+  -webkit-transform: translate(0, 100%);
+          transform: translate(0, 100%);
+  top: 3rem;
+  left: 3rem;
+  border-bottom: 3px solid darkblue;
+  width: 5rem;
+}
+
+.news-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.6rem;
+  color: #555;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid gainsboro;
+  width: 800px;
+  margin-top: 2rem;
+}
+
+.day {
+  height: 3rem;
+  width: 9rem;
+  padding-top: 3px;
+}
+
+.label {
+  display: inline-block;
+  color: white;
+  font-weight: bold;
+  padding: .3rem 2rem;
+  border-radius: .5rem;
+  margin: 0 2rem;
+  height: 3rem;
+  cursor: pointer;
+}
+
+.label:hover {
+  opacity: .8;
+  color: yellow;
+}
+
+.label3 {
+  background: tomato;
+}
+
+.label3::before {
+  content: "label3";
+}
+
+.label2 {
+  background: dodgerblue;
+}
+
+.label2::before {
+  content: "label2";
+}
+
+.label1 {
+  background: gray;
+}
+
+.label1::before {
+  content: "label1";
+}
+
+.news-text {
+  padding-top: 3px;
+  display: inline-block;
+  width: 500px;
+}
+
+.news-text a {
+  text-decoration: none;
+  display: block;
+}
+
+.news-text a:hover {
+  color: royalblue;
+  text-decoration: underline;
+}
+
+.more {
+  margin-top: 6rem;
+  color: tomato;
+  font-size: 2rem;
+  position: relative;
+  width: 50px;
+  margin: 6rem auto;
+}
+
+.more::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 40%;
+  right: -15px;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  background: url(../img/news-arrow.png) no-repeat center center/contain;
+}
+
+.more a {
+  display: block;
+  text-decoration: none;
+}
+
+.more a:hover {
+  color: red;
+  text-decoration: underline;
+  border-radius: 3rem;
+}
+/*# sourceMappingURL=style.css.map */
