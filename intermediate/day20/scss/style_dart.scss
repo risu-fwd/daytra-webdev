@@ -1,0 +1,38 @@
+@use "var" as var;
+
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+  background: #ddd;
+  color: #333;
+}
+
+$cl-red: var.$red;
+$cl-blue: var.$blue;
+$cl-green: var.$green;
+$cl-yellow: var.$yellow;
+
+.tomato {
+  color: $cl-red;
+}
+
+.ocean {
+  color: $cl-blue;
+}
+
+.forest {
+  color: $cl-green;
+}
+
+
+.inner {
+  margin: 0 auto;
+  width: 1000px;
+  background: gainsboro;
+
+  color: red;
+}

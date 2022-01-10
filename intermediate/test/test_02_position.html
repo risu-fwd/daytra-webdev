@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test | positioning</title>
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css"
+  />
+  <style>
+    html {
+      background: gainsboro;
+      color: #333;
+      font-size: 10px;
+    }
+
+    body {
+      font-size: 1.6rem;
+    }
+
+    .box {
+      height: 200px;
+      width: 200px;
+      color: white;
+      font-weight: 700;
+      display: table;
+      border-radius: 3px;
+    }
+
+    .box-name {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+    }
+
+    .box00 {
+      background: tomato;
+      position: relative;
+    }
+
+    .box00::before {
+      content: "aaaa";
+      width: 20px;
+      height: 20px;
+      top: 0px;
+      left: 0px;
+      background: mediumaquamarine;
+    }
+
+    .box00::after {
+      /* content: "bbbb";
+      width: 0;
+      height: 0;
+      top: 0x;
+      left: 0;
+      transform: translate(100px, 100px);
+      background: yellow; */
+      
+      content: "";
+      width: 20px;
+      height: 20px;
+      border: 1px solid #707070;
+      position: absolute;
+      left: 0;
+      top: 50%; 
+      transform: translateY(-50%);
+      background: #fff;
+      border-radius: 50%;
+
+      content: "";
+      width: 10px;
+      height: 10px;
+      background: darkblue;
+      position: absolute;
+      left: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+     border-radius: 50%;
+    }
+
+    .box01 {
+      background: dodgerblue;
+      position: absolute;
+      top: 0;
+      left: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(50%, 50%);
+    }
+
+  </style>
+</head>
+<body>
+  <div class="box box00">
+    <p class="box-name">box00 - parent</p>
+
+    <div class="box box01">
+      <p class="box-name">box01 - child</p>
+    </div>
+  </div>
+
+</body>
+</html>

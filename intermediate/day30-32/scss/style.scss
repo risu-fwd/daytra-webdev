@@ -1,0 +1,108 @@
+@import 'variables';
+@import 'functions';
+@import 'color';
+
+@import 'sec-header';
+@import 'sec-top';
+@import 'sec-concept';
+@import 'sec-feature';
+@import 'sec-products';
+@import 'sec-news';
+@import 'sec-contact';
+@import 'sec-footer';
+
+$is-test: is-test(true);
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: $cl-bg;
+  color: $cl-font;
+  font-size: 1.6rem;
+  // padding: 0 40px;
+
+  font-family: ヒラギノ明朝 ProN;
+}
+
+a {
+  text-decoration: none;
+  color: $cl-font;
+
+  &:hover {
+    color: $cl-font;
+  }
+}
+
+.inner {
+  // width: 1280px;
+  max-width: 1280px;
+  padding: 0 40px;
+  margin: 0 auto;
+
+  @include mq('sp') {
+    padding: 0 15px;
+  }
+}
+
+.section {
+  margin-bottom: 160px;
+}
+
+.title-container {
+  height: 120px;
+}
+
+.section-title {
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 16px;
+  // margin-bottom: 80px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background-color: $cl-main;
+    top: 100%;
+    left: 50%;
+
+    transform: translateX(-50%);
+  }
+}
+
+.btn-container {
+  margin: 0 auto;
+  // background-color: cyan;
+  width: 157px;
+  height: 46px;
+}
+
+.btn {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  background: $cl-bg;
+  color: $cl-main;
+  font-size: 14px;
+  border: 1px solid $cl-main;
+  vertical-align: middle;
+  transition: all .3s;
+
+  &:hover {
+    // opacity: .5;
+    background-color: $cl-main;
+    color: white;
+    cursor: pointer;
+    // transform: translateY(-3px);
+    // box-shadow: 0 3px 3px rgba(black, 0.16);
+  }
+
+  &:active {
+    
+  }
+}

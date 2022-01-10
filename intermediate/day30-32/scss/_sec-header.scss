@@ -1,0 +1,86 @@
+// ----- section header -----
+.header {
+  height: 70px;
+}
+
+.header__container {
+  width: 100%;
+  background-color: $cl-bg;
+  position: fixed;
+  z-index: 100;
+  // box-shadow: 0 2px 2px rgba(black, .16);
+}
+
+.header__inner-container {
+  // height: 70px;
+  width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+
+  @include mq('sp') {
+    width: 100%;
+    display: block;
+  }
+
+}
+
+.header__site-title {
+  line-height: 70px;
+
+  @include mq('sp') {
+    width: fit-content;
+    margin-left: 15px;
+  }
+
+  img {
+    width: 120px;
+    height: 21px;
+    vertical-align: middle;
+
+    @include mq('sp') {
+      // margin: 0 auto;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    // background-color: cyan;
+  }
+
+}
+
+.header__main-nav {
+  font-weight: 300;
+  line-height: 70px;
+  vertical-align: bottom;
+
+  @include mq('sp') {
+    display: none;
+  }
+
+  ul {
+    display: flex;
+
+    li {
+      // margin-left: 48px;
+      padding: 0px 24px;
+    
+      &:hover {
+        cursor: pointer;
+      }
+
+      a {
+        display: inline-block;
+        transition: all .3s;
+      }
+
+      &:hover a {
+        color: $cl-main;
+        opacity: .8;
+      }
+    }
+  }
+}
+

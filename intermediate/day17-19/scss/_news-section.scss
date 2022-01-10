@@ -1,45 +1,37 @@
-@charset "UTF-8";
-
-@import 'basic';
-@import 'variables';
-@import 'mixin';
-
-/* ==================================================
-custom CSS
-================================================== */
-$cl-text: #555;
-
-.inner {
+.news {
+  // margin-top: 200px;
   width: 800px;
   margin: 0 auto;
-  // text-align: center;
-  padding: 3rem;
-  font-size: 3rem;
-  // background: aqua;
+  // color: red;
+  // background: cyan;
 }
 
-.title {
-  margin-top: 5rem;
-  font-size: 4rem;
+.news__head {
+  font-size: 48px;
   font-weight: 700;
-  padding-bottom: 1rem;
-
+  text-align: center;
+  padding-bottom: 28px;
   position: relative;
-  display: block;
-  width: fit-content;
-  // background-color: gainsboro;
-  margin: 0 auto;
 
   &::after {
     content: "";
     position: absolute;
-    height: 20px;
-    width: 100px;
-    transform: translate(0, 100%);
-    top: 3rem;
-    left: 3rem;
-    border-bottom: 3px solid darkblue;
-    width: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 60px;
+    height: 4px;
+    background: $cl-main;
+
+    @include mq('sp') {
+      width: 42px;
+      height: 3px;
+    }
+  }
+
+  @include mq('sp') {
+    font-size: 26px;
+    padding-bottom: 18px;
   }
 }
 

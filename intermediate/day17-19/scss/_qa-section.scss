@@ -1,0 +1,126 @@
+.qa {
+  padding-top: 88px;
+  background: white;
+}
+
+.qa__inner {
+  width: 1000px;
+}
+
+.qa__head {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  padding-bottom: 28px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 60px;
+    height: 4px;
+    background: $cl-main;
+
+    @include mq('sp') {
+      width: 42px;
+      height: 3px;
+    }
+  }
+
+  @include mq('sp') {
+    font-size: 26px;
+    padding-bottom: 18px;
+  }
+}
+
+.qa__items {
+  width: 900px;
+  max-width: 100%;
+  margin: 80px auto 0;
+}
+
+.qa__item {
+
+}
+
+.qa-box {
+  border: 1px solid $cl-main;
+  margin-bottom: 24px;
+}
+
+.qa-box__q {
+  color: white;
+  background: $cl-main;
+  padding: 12px 56px;
+  font-weight: bold;
+  position: relative;
+
+  &::before {
+    content: "Q";
+    position: absolute;
+    top: 12px;
+    left: 20px;
+  }
+}
+
+.qa-box__icon {
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &.is-open {
+    .qa-box__bar2 {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.qa-box__bar1 {
+  width: 14px;
+  height: 2px;
+  background-color: white;
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+
+.qa-box__bar2 {
+  width: 2px;
+  height: 14px;
+  background-color: white;
+  border-radius: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  transition: all .3s;
+}
+
+.qa-box__a {
+  background: white;
+  font-weight: 700;
+  color: $cl-main;
+  line-height:  24 / 16;
+  padding: 16px 30px 16px 20px;
+  display: none;
+}
+
+.qa-box__content {
+  position: relative;
+  padding-left: 36px;
+
+  &::before {
+    content: "A";
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}

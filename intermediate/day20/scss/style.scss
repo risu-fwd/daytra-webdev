@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+@import 'basic';
+@import 'variables';
+@import 'mixin';
+
+@import 'anim';
+
+
+/* ==================================================
+custom CSS
+================================================== */
+.section {
+  padding: 88px 0 120px;
+
+  @include mq('sp') {
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+}
+

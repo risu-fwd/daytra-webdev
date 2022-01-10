@@ -1,0 +1,51 @@
+.concept {
+
+}
+
+.concept__container {
+  max-width: 1200px;
+  height: 520px;
+}
+
+.concept__item-container {
+  display: flex;
+}
+
+.concept__pic {
+
+  img {
+    width: 600px;
+    height: 400px;
+  }
+
+}
+
+.concept__text-container {
+  width: 521px;
+  position: relative;
+  // background-color: cyan;
+  margin-left: 80px;
+}
+
+.concept__main-text {
+  // width: 320px;
+  width: 500px;
+  height: 54px;
+
+  position: absolute;
+  top: 112px;
+
+  font-size: 20px;
+  font-weight: 600;
+  line-height: calc(34 / 20 );
+}
+
+.concept__sub-text {
+  width: 520px;
+  height: 75px;
+
+  position: absolute;
+  top: 214px;
+  line-height: calc(27 / 16);
+  // bottom: 111px;
+}

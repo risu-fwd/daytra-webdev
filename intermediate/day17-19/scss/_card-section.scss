@@ -1,0 +1,124 @@
+// --- card ---
+
+.card {
+  background: tomato;
+  // padding: 3rem;
+  margin-top: 100px;
+
+  background: #efefef;
+  padding: 100px 0 120px;
+
+  @include mq('sp') {
+    margin-top: 50px;
+    padding-bottom: 60px;
+  }
+}
+
+.card__inner {
+  // display: flex;
+  // justify-content: space-around;
+  width: 1200px;
+  // background: aqua;
+}
+
+.card__head {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  padding-bottom: 28px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 60px;
+    height: 4px;
+    background: $cl-main;
+
+    @include mq('sp') {
+      width: 42px;
+      height: 3px;
+    }
+  }
+
+  @include mq('sp') {
+    font-size: 26px;
+    padding-bottom: 18px;
+  }
+}
+
+.card__items {
+  margin-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+
+  @include mq('sp') {
+    margin-top: 42px;
+  }
+}
+
+.card__item {
+  width: calc(33.3% - 24px * 2 / 3);
+  background-color: white;
+  padding: 16px;
+  border-radius: 4px;
+
+  margin-top: 40px; //
+
+  @include mq('pc') {
+    &:not(:nth-child(3n + 1)) {
+      margin-left: 24px;
+    }
+  
+    &:nth-child(n + 4) {
+      margin-top: 24px;
+    }
+  }
+
+  @include mq('tab') {
+    width: calc(50% - 24px * 1/2);
+
+    &:not(:nth-child(2n + 1)) {
+      margin-left: 24px;
+    }
+  
+    &:nth-child(n + 3) {
+      margin-top: 24px;
+    }
+  }
+
+  @include mq('sp') {
+    width: 100%;
+    margin-left: 0;
+  
+    &:nth-child(n + 2) {
+      margin-top: 24px;
+    }
+  }
+}
+
+.card__img {
+  
+  // text-align: center;
+  img {
+    width: 100%;
+  }
+}
+
+.card__title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #6F7579;
+  margin-top: 14px;
+}
+
+.card__text {
+  font-weight: bold;
+  color: #6F7579;
+  line-height: (24 / 16);
+  margin-top: 14px;
+}

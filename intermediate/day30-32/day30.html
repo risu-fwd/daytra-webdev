@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- font awesome -->
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
+  <title>daily trial [web-dev] - intermediate | DAY30-32 </title>
+  <style>
+    @import url(css/reset.css);
+    @import url(css/style.css);
+  </style>
+  <link rel="stylesheet" href="css/animate.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<!-- section header -->
+  <section class="header">
+    <div class="header__container">
+      <div class="header__inner-container">
+        <div class="header__site-title" onclick="reload()">
+          <img src="img/logo.png" alt="site logo">
+        </div>
+        <nav class="header__main-nav">
+          <ul>
+            <li><a href="#concept">Concept</a></li>
+            <li><a href="#feature">Feature</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+<!-- section top -->
+  <section class="top section">
+    <div class="top__container inner wow fadeInUp">
+      <div class="top__text-container">
+        <p class="top__main-text">
+          Protect the earth with "Kawaii"!
+        </p>
+        <p class="top__sub-text">
+          Handmade accessory "sobolon" made of marine microplastic.
+        </p>
+      </div>
+      <div class="top__pic-container"></div>
+    </div>
+  </section>
+
+<!-- section concept -->
+  <section class="concept section" id="concept">
+    <div class="concept__container inner wow fadeInUp">
+      <div class="title-container">
+        <h2 class="section-title">Concept</h2>
+      </div>
+      <div class="concept__item-container">
+        <div class="concept__pic">
+          <img src="img/concept-1.png" alt="concept1 pic">
+        </div>
+        <div class="concept__text-container">
+          <p class="concept__main-text">
+            It's natural that it's cute and nice.
+            <br>
+            It is natural that it is kind to the earth.
+          </p>
+          <p class="concept__sub-text">
+            "Sobolon" is a brand that collects microplastics, which are the cause of marine pollution, and produces handmade accessories made from them.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- section feature -->
+  <section class="feature section" id="feature">
+    <div class="feature__container wow fadeInUp">
+      <div class="title-container">
+        <h2 class="section-title">Feature</h2>
+      </div>
+      <div class="feature__item-container">
+
+        <a href="https://www.sobolon.com/" class="feature__link">
+          <div class="feature__item-card">
+            <div class="feature__item-pic">
+              <img src="img/feature-1.png" alt="item pic1">
+              <p class="feature__item-desc">
+                The material is microplastic <br> from the sea
+              </p>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://www.sobolon.com/" class="feature__link">
+          <div class="feature__item-card">
+            <div class="feature__item-pic">
+              <img src="img/feature-2.png" alt="item pic2">
+              <p class="feature__item-desc">
+                "Kawaii" design <br> full of individuality
+              </p>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://www.sobolon.com/" class="feature__link">
+          <div class="feature__item-card">
+            <div class="feature__item-pic">
+              <img src="img/feature-3.png" alt="item pic3">
+              <p class="feature__item-desc">
+                Only one one-of-a-kind accessory <br> in the world
+              </p>
+            </div>
+          </div>
+        </a>
+
+      </div>
+      <div class="feature__big-pic-container">
+        <div class="feature__big-pic">
+          <p class="feature__main-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, quis.
+          </p>
+          <p class="feature__sub-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore pariatur eius laboriosam. Laborum obcaecati nisi cum molestias fugit ea alias repellendus expedita cumque magni pariatur, commodi animi quasi? Nemo natus maxime soluta dolorem vel. Error placeat optio soluta. A adipisci consequuntur iure recusandae ipsam, aperiam at enim laborum officiis. Aperiam.
+          </p>
+        </div>  
+      </div>
+    </div>
+  </section>
+
+<!-- section products -->
+  <section class="products section" id="products">
+    <div class="products__container wow fadeInUp">
+      <div class="title-container">
+        <h2 class="section-title">Products</h2>
+      </div>
+      <div class="products__item-container">
+
+        <a href="https://www.sobolon.com/" class="products__link">
+          <div class="products__card">
+            <img src="img/product-1.png" alt="product pic1" class="products__pic">
+            <p class="products__desc">
+              [square earring] Lorem ipsum dolor sit amet consectetur adipisicing.
+            </p>
+            <div class="products__price">
+              3,695yen
+            </div>
+          </div>
+        </a>
+      
+        <a href="https://www.sobolon.com/" class="products__link">
+          <div class="products__card">
+            <img src="img/product-2.png" alt="product pic2" class="products__pic">
+            <p class="products__desc">
+              [square ring] Lorem ipsum dolor sit amet consectetur adipisicing.
+            </p>
+            <div class="products__price">
+              2,390yen
+            </div>
+          </div>
+        </a>
+
+        <a href="https://www.sobolon.com/" class="products__link">
+          <div class="products__card">
+            <img src="img/product-3.png" alt="product pic3" class="products__pic">
+            <p class="products__desc">
+              [pin badge] Lorem ipsum dolor sit amet consectetur adipisicing.
+            </p>
+            <div class="products__price">
+              2,580yen
+            </div>
+          </div>
+        </a>
+
+      </div>
+      <div class="btn-container">
+        <button class="btn">MORE</button>
+      </div>
+    </div>
+  </section>
+  
+<!-- section news -->
+  <section class="news section" id="news">
+    <div class="news__container wow fadeInUp">
+      <div class="news__main-container">
+        <div class="title-container">
+          <h2 class="section-title">News</h2>
+        </div>
+        <div class="news__item-container">
+
+          <a href="https://www.sobolon.com/" class="news__link">
+            <div class="news__item">
+              <div class="news__item-pic">
+                <img src="img/news-1.png" alt="news pic1" class="news__pic">
+              </div>
+              <div class="news__item-desc">
+                <div class="news__day">
+                  2/4/2020
+                </div>
+                <div class="news__title">
+                  Lorem ipsum dolor sit amet.
+                </div>
+                <div class="news__text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, eius.
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://www.sobolon.com/" class="news__link">
+            <div class="news__item">
+              <div class="news__item-pic">
+                <img src="img/news-2.png" alt="news pic2" class="news__pic">
+              </div>
+              <div class="news__item-desc">
+                <div class="news__day">
+                  1/20/2020
+                </div>
+                <div class="news__title">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, ratione.
+                </div>
+                <div class="news__text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, eius.
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://www.sobolon.com/" class="news__link">
+            <div class="news__item">
+              <div class="news__item-pic">
+                <img src="img/news-3.png" alt="news pic3" class="news__pic">
+              </div>
+              <div class="news__item-desc">
+                <div class="news__day">
+                  11/23/2020
+                </div>
+                <div class="news__title">
+                  Lorem, ipsum.
+                </div>
+                <div class="news__text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, eius.
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <div class="btn-container">
+            <button class="btn">MORE</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="news__concept">
+        <div class="news__concept-desc">
+          <div class="news__concept-main-text">
+            Lorem ipsum dolor
+            <br>
+            sit amet consectetur adipisicing elit.
+          </div>
+          <div class="news__concept-sub-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quaerat unde, quasi aut, accusamus eaque, deleniti reiciendis perspiciatis odio aliquam laudantium earum voluptas soluta sed.
+          </div>
+        </div>
+        <div class="news__concept-pic-container">
+          <img src="img/concept-2.png" alt="concept pic2" class="news__concept-pic">
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- section contact -->
+  <section class="contact section" id="contact">
+    <div class="contact__container wow fadeInUp">
+      <div class="title-container">
+        <h2 class="section-title">Contact</h2>
+      </div>
+      <div class="contact__form-container">
+        <form action="post" class="contact__form" onsubmit="return false;">
+          <p class="contact__note">&emsp; required input</p>
+          <div class="contact__input-container">
+            <div class="contact__input-item">Name<span class="required">*</span></div>
+            <div class="contact__input-name">
+              <input type="text" class="contact__name" id="input-name">
+            </div>
+          </div>
+          <div class="contact__input-container">
+            <div class="contact__input-item">Mail<span class="required">*</span></div>
+            <div class="contact__input-mail">
+              <input type="email" class="contact__mail" id="input-mail">
+            </div>
+          </div>
+          <div class="contact__input-container">
+            <div class="contact__input-item">Corporation/Private<span class="required">*</span></div>
+            <!-- radio -->
+            <div class="contact__input-corp-or-not">
+              <label><input type="radio" name="radio-contact" class="contact__corp-or-not" value="corp" checked><div class="radio-box">corp</div></label>
+              <label><input type="radio" name="radio-contact" class="contact__corp-or-not" value="private"><div class="radio-box">private</div></label>
+            </div>
+          </div>
+          <div class="contact__input-container">
+            <div class="contact__input-item">Inquiry Contents<span class="required">*</span></div>
+            <div class="contact__input-contact">
+              <textarea name="" cols="30" rows="10" class="contact__detail" id="input-inqu"></textarea>
+            </div>
+          </div>
+          <div class="contact__accept">
+            <input type="checkbox">
+            <span>accept to <a href="">privacy/policy</a></span>
+          </div>
+          <div class="btn-container">
+            <input type="submit" class="contact__submit" value="SUBMIT" id="submit-btn" disabled>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+<!-- footer -->
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__items">
+        <a href="">
+          <div class="footer__img-container">
+            <img src="img/logo.png" alt="logo" class="footer__img">
+          </div>
+        </a>
+        <div class="footer__text">
+          <span>Privacy/Policy</span>
+          |
+          <span>Notation based on the Specified Commercial Transactions Law</span>
+        </div>
+        <div class="footer__sns-icons">
+          <div>
+            <a href="https://twitter.com/">
+              <i class="fab fa-twitter fa-2x footer__icon"></i>
+            </a>
+          </div>
+          <div>
+            <a href="https://www.instagram.com/">
+              <i class="fab fa-instagram fa-2x footer__icon"></i>
+            </a>
+          </div>
+          <div>
+            <a href="https://guide.line.me/ja/">
+              <i class="fab fa-line fa-2x footer__icon"></i>
+            </a>
+          </div>
+        </div>
+        <div class="footer__copyright">
+          &copy; 2020 sobolon All rights reserved
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<!-- JavaScript -->
+  <script src="js/wow.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

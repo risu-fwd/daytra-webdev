@@ -1,0 +1,7 @@
+@function is-test($arg) {
+  @if $arg == true {
+    @return 1;
+  } @else {
+    @return 0;
+  }
+}

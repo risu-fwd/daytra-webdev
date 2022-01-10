@@ -1,0 +1,25 @@
+$layout-width-inner: 768px;
+
+// breakpoint
+$breakpoints: (
+// key : value
+  'sp': "(max-width: 767px)", 
+  'tab': "(min-width: 768px) and (max-width: #{$layout-width-inner - 1px})", 
+  'pc': "(min-width: #{$layout-width-inner})"
+) !default;
+
+/* ==================================================
+break point for media query
+================================================== */
+// $breakpoints: (
+//   'sp' : 'screen and (max-width: 767px)', // for celly
+//   'pc' : 'screen and (max-width: 768px)' // for PC 
+//  ) !default;
+
+// --- mixin using on media query ---
+@mixin mq($breakpoint: sp) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+

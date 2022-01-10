@@ -1,0 +1,137 @@
+body {
+	background: gainsboro;
+}
+
+.test {
+	margin: 0 auto;
+	width: 1000px;
+	// height: 1000px;
+	// background-color: mediumaquamarine;
+	background: linear-gradient(mediumaquamarine, 60%, rgb(45, 120, 118));
+	// background: linear-gradient(#e66465, #9198e5);
+	border-radius: 3rem;
+	padding: 3rem;
+}
+
+.btn {
+	margin: 3rem auto;
+	width: 100px;
+	height: 40px;
+	border-radius: 2rem;
+	padding: 1rem;
+  text-align: center;
+	vertical-align: middle;
+  color: white;
+}
+
+.btn00 {
+	transition: .3s;
+	background: green;
+
+	&:hover {
+		opacity: .5;
+	}
+}
+
+.btn01 {
+	transition: .3s;
+	background: tomato;
+
+	&:hover {
+		background: white;
+		color: tomato;
+	}
+}
+
+.btn02 {
+  background: dodgerblue;
+	border-bottom: 3px solid darkblue;
+  transition: all .3s;
+	height: 43px;
+
+  &:hover {
+		transform: translateY(3px);
+		border-bottom: 0px;
+  }
+}
+
+.btn03 {
+	background: lightgray;
+	transition: all .3s;
+
+	&:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 3px 3px rgba(0, 0, 0, .5);
+	}
+}
+
+.btn04 {
+	background: mediumpurple;
+	transition: all .3s;
+
+	&:hover {
+		transform: rotateX(360deg);
+	}
+}
+
+.btn05 {
+	background: khaki;
+	transition: all .3s;
+
+	&:hover {
+		transform: rotateY(360deg);
+	}
+}
+
+.btn05 {
+	background: lightcoral;
+	transition: all .3s;
+
+	&:hover {
+		transform: rotate(360deg);
+	}
+}
+
+.btn06 {
+	background: greenyellow;
+	transition: all .3s;
+
+	&:hover {
+		transform: scale(1.5, 1.5);
+	}
+}
+
+.btn07 {
+	font-weight: bold;
+	border: 3px solid white;
+	transition: all .3s;
+
+	&:hover {
+		border: 3px solid tomato;
+		color: tomato;
+	}
+}
+
+.btn08 {
+	background-color: khaki;
+	color: #333;
+	position: relative;
+
+	&::after {
+		position: absolute;
+		bottom: 4px;
+		left: 10%;
+		content: '';
+		width: 80%;
+		height: 2px;
+		background: #333;
+		transform: scale(0, 1);
+		transform-origin: left top;
+		transition: transform .3s;
+	}
+
+	&:hover::after {
+		transform: scale(1, 1);
+	}
+
+}

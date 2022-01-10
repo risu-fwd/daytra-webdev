@@ -1,0 +1,56 @@
+//==================================================
+// Products
+//==================================================
+.products {
+
+}
+
+.products__container {
+  max-width: 940px;
+  height: 592px;
+  margin: 0 auto;
+  // background-color: cyan;
+}
+
+.products__item-container {
+  // max-width: 940px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+
+.products__card {
+  width: 260px;
+}
+
+.products__link {
+  transition: all .3s;
+  
+  &:hover {
+    opacity: .8;
+    color: gainsboro;
+    transform: scale(102%);
+  }
+
+  &:hover .products__price {
+    color: gainsboro;
+  }
+}
+
+.products__pic {
+  // width: 260px;
+  height: 260px;
+  margin-bottom: 24px;
+}
+
+.products__desc {
+  height: 62px;
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  margin-bottom: 16px;
+}
+
+.products__price {
+  color: #989898;
+}
+

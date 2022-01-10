@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test | table</title>
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css" /> -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<style>
+  html {
+    font-size: 10px;
+  }
+
+  body {
+    font-size: 1.6rem;
+    background-color: lightblue;
+  }
+
+  .wrapper {
+    width: 800px;
+
+    height: 360px;
+    padding: 2rem;
+    margin: 3rem auto;
+    background: mediumaquamarine;
+
+    overflow-x: auto;
+  }
+
+  .title {
+    margin: 0 auto;
+    width: 300px;
+    font-weight: 700;
+
+    text-decoration: underline wavy blue;
+  }
+
+  .table {
+
+    text-align: center;
+    margin: 0 auto;
+    width: 600px;
+    /* width: 2000px; */
+    /* table-layout: fixed; */
+  }
+
+  .table tr {
+
+  }
+
+  .table th {
+    padding: 2rem;
+  }
+
+  .table td {
+    padding: 2rem;
+  }
+
+  .controller {
+    width: 1000px;
+    margin: 0 auto;
+    background: #ddd;
+    padding: 2rem;
+  }
+
+  .border {
+    border: 3px solid #333;
+  }
+
+  .border-collapse {
+    border-collapse: collapse;
+  }
+
+
+  .text-wrapper {
+
+
+  }
+
+  .text-area {
+    padding: 2rem;
+    background: aqua;
+    /* height: 20px; */
+    /* width: 1200px; */
+    
+    margin-bottom: 3rem;
+    /* overflow: hidden; */
+    /* overflow-x: scroll; */
+    width: 600px;
+    height: 30px;
+    overflow-x: scroll;
+  }
+</style>
+<body>
+  <div class="wrapper">
+    <h2 class="title">table</h2>
+    <table class="table">
+      <thead>
+        <tr><th class="th">th</th><th class="th">th</th><th class="th">th</th></tr>
+      </thead>
+      <tbody>    
+        <tr><th class="th">th</th><td class="td">td</td><td class="td">td</td></tr>
+        <tr><th class="th">th</th><td class="td">td</td><td class="td">td</td></tr>
+        <tr><th class="th">th</th><td class="td">td</td><td class="td">td</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="controller">
+    .table {
+    <br>
+    &emsp;<input type="checkbox" id="check00"> border: 3px solid #333;
+    <br>
+    &emsp;<input type="checkbox" id="check03"> border-collapse: collapse;
+    <br>
+    }
+    <br>
+    <br>
+    .th {
+    <br>
+    &emsp;<input type="checkbox" id="check01"> border: 3px solid #333;
+    <br>
+    }
+    <br>
+    <br>
+    .td {
+    <br>
+    &emsp;<input type="checkbox" id="check02"> border: 3px solid #333;
+    <br>
+    }
+
+  </div>
+
+  <div class="text-wrapper">
+    <div class="text-area">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis laborum eveniet eum blanditiis aliquam autem quia, maxime praesentium aspernatur earum ea, dignissimos inventore soluta hic exercitationem? Minus esse inventore incidunt deserunt, quis nihil molestias quibusdam at quaerat. Enim est reiciendis nihil vel eaque aliquam, nostrum necessitatibus. Debitis vero maiores earum?
+    </div>
+  </div>
+
+
+  <script>
+  $(function(){
+
+    // init
+    init();
+    initBorder();
+
+    // method
+    // table border
+    $('#check00').on('click', function() {
+      if($(this).prop('checked') == true) {
+        // $('body').css({'background':'aqua'});
+        $('.table').addClass('border');
+      } else {
+        // $('body').css({'background':'tomato'});
+        $('.table').removeClass('border');
+      }
+    });
+
+    // table head border
+    $('#check01').on('click', function() {
+      if($(this).prop('checked') == true) {
+        $('.th').addClass('border');
+      } else {
+        $('.th').removeClass('border');
+      }
+    });
+
+    // table data border
+    $('#check02').on('click', function() {
+      if($(this).prop('checked') == true) {
+        $('.td').addClass('border');
+      } else {
+        $('.td').removeClass('border');
+      }
+    });
+
+    // border collapse
+    $('#check03').on('click', function() {
+      if($(this).prop('checked') == true) {
+        $('.table').addClass('border-collapse');
+      } else {
+        $('.table').removeClass('border-collapse');
+      }
+    });
+
+
+    function init() {
+      $('#check00').prop('checked', true);
+      $('#check01').prop('checked', true);
+      $('#check02').prop('checked', true);
+    }
+
+    function initBorder() {
+      $('.table').addClass('border');
+      $('.th').addClass('border');
+      $('.td').addClass('border');
+    }
+
+  })
+  </script>
+</body>
+</html>
