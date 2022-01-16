@@ -1,0 +1,144 @@
+.modal-contact {
+  position: fixed;
+  background: white;
+  z-index: 1001;
+  // max-width:900px;
+  max-width: calc(100% - 24px * 2);
+  height: 652px;
+  max-height: calc(100% - 24px * 2);
+  box-shadow: 0 0 3px rgba(#000, 0.16);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 60px;
+  color: #707070;
+
+  @include mq('sp') {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+.modal-contact__head {
+  font-size: 24px;
+  font-weight: bold;
+  padding-bottom: 24px;
+  position: relative;
+  text-align: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    background: $cl-main;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%);
+  }
+}
+
+.modal-contact__content {
+  margin-top: 40px;
+  height: calc(100% - 84px - 100px);
+  overflow: auto;
+}
+
+.modal-contact__sub-head {
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 20px;
+  position: relative;
+  margin-top: 40px;
+
+  > :first-child {
+    margin-top: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 20px;
+    background: $cl-main;
+  }
+}
+
+.modal-contact__text {
+  margin-top: 16px;
+  font-size: 16px;
+  line-height: (24 / 16);
+  padding-left: 20px;
+}
+
+.modal-contact__sub-head {
+
+}
+
+.modal-contact__button {
+  background: $cl-main;
+  width: 176px;
+  height: 48px;
+  margin: 60px auto;
+  // border-radius: 5px;
+  text-align: center;
+  line-height: 48px;
+
+  // &:hover {
+  //   opacity: .8;
+  // }
+
+  a {
+    background-color: white;
+    color: $cl-main;
+    border: 1px solid $cl-main;
+
+    text-decoration: none;
+    display: inline-block;
+    width: inherit;
+    // box-shadow: 0 3px 6px rgba(black, 0.16);
+    transition: all .3s;
+
+    &:hover {
+      background-color: $cl-main;
+      color: white;
+    }
+  }
+}
+
+.modal-contact__icon {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: -20px;
+  top: -20px;
+
+  a {
+
+  }
+
+  img {
+    width: 40px;
+  }
+}
+
+.modal-contact-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  opacity: .3;
+  z-index: 1000;
+
+  // position: relative;
+  // transform: translate(-50%, -50%);
+}
+
+.target-modal {
+  display: none;
+}

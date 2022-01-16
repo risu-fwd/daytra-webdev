@@ -10,6 +10,9 @@
   height: 592px;
   margin: 0 auto;
   // background-color: cyan;
+  @include mq('sp') {
+    height: fit-content;
+  }
 }
 
 .products__item-container {
@@ -17,10 +20,16 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 48px;
+
+  @include mq('sp') {
+    display: block;
+    margin: 0 auto;
+  }
 }
 
 .products__card {
   width: 260px;
+  margin: 0 auto 48px;
 }
 
 .products__link {

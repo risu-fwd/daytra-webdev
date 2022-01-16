@@ -1,0 +1,92 @@
+//======================================================================
+// customizing Drawer.js 
+//======================================================================
+// quoted from [ https://travelogue.jp/blog/archives/5313.html ]
+
+@import 'variables';
+@import 'functions';
+@import 'color';
+
+@import 'sec-header';
+
+// drawer button (for celly)
+.drawer-toggle {
+
+  span {
+    display: none;
+
+    @include mq('sp') {
+      display: block;
+    }
+  }
+}
+
+.drawer-hamburger {
+  padding-top: 30px;
+  padding-right: 30px;
+}
+
+.drawer-hamburger-icon {
+  width: 30px;
+
+  background-color: $cl-main;
+
+  &::before {
+    background-color: $cl-main;
+  }
+
+  &::after {
+    background-color: $cl-main;
+  }
+}
+
+.drawer--right.drawer-open .drawer-hamburger {
+  right: 0px;
+}
+
+// drawer menu (when expand)
+.drawer-nav {
+  margin-top: 70px;
+  background: $cl-main;
+
+  .drawer-brand {
+    font-size: 2rem;
+  }
+
+  ul {
+
+    &:first-child {
+      padding-top: 26px;
+    }
+
+    li {
+      padding: 20px 15px;
+      border-bottom: 1px dashed rgb(117, 178, 194);
+
+      a {
+        text-align: right;
+        color: $cl-font;
+        color: white;
+        font-size: 1.8rem;
+        font-weight: 600;
+        // background-color: cyan;
+
+        &:hover {
+          color:rgb(188, 216, 223);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+// overlay
+.drawer-overlay {
+  // background-color: rgba(0, 0, 0, .2);
+  // background-color: rgba(0, 0, 0, 0);
+}
+
+// wanna changing drawer menu size from JS
+.expand-width {
+  width: 270px;
+}

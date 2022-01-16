@@ -4,48 +4,81 @@
 
 .concept__container {
   max-width: 1200px;
-  height: 520px;
+  // min-height: 520px;
+
+  @include mq('sp') {
+    // margin-bottom: 64px;
+    height: fit-content;
+  }
 }
 
 .concept__item-container {
   display: flex;
+  // justify-content: space-around;
+  // background-color: mediumaquamarine;
+  width: fit-content;
+
+  @include mq('sp') {
+    width: 100%;
+    display: block;
+  }
 }
 
 .concept__pic {
-
+  width: 50%;
+  min-width: 300px;
+  // background-color: dodgerblue;
+  margin-right: 5vw;
   img {
-    width: 600px;
-    height: 400px;
+    width: 100%;
+    height: 100%;
+  }
+
+  @include mq('sp') {
+    width: 100%;
+    height: auto;
   }
 
 }
 
 .concept__text-container {
-  width: 521px;
-  position: relative;
-  // background-color: cyan;
-  margin-left: 80px;
+  padding-top: 112px;
+  // background-color: tomato;
+  max-width: 521px;
+  width: 40vw;
+
+  @include mq('sp') {
+    width: 100%;
+    padding-top: 40px;
+    margin: 0 auto;
+  }
 }
 
 .concept__main-text {
-  // width: 320px;
-  width: 500px;
-  height: 54px;
-
-  position: absolute;
-  top: 112px;
+  max-width: 500px;
+  min-height: 54px;
 
   font-size: 20px;
   font-weight: 600;
   line-height: calc(34 / 20 );
+  // border: 3px solid red;
+  margin-bottom: 10px;
+
+  @include mq('sp') {
+    
+    // position: static;
+    // margin-bottom: 32px;
+  }
 }
 
 .concept__sub-text {
-  width: 520px;
-  height: 75px;
-
-  position: absolute;
-  top: 214px;
+  // border: 3px solid blue;
+  max-width: 520px;
+  min-height: 75px;
   line-height: calc(27 / 16);
-  // bottom: 111px;
+
+  @include mq('sp') {
+    // position: static;
+    width: 80%;
+  }
 }

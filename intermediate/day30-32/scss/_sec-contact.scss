@@ -4,22 +4,35 @@
   }
 
   &.section {
-    background: url(../../../img-storage/day30/contact.png) center center / cover;
+    background: url(../img/contact.png) center center / cover;
 
   }
 }
 
 .contact__container {
-  width: 1280px;
+  max-width: 1280px;
   height: 800px;
   // background: url(../../../img-storage/day30/contact.png) center center / cover;
   padding-top: 72px;
   margin: 0 auto;
+
+  @include mq('sp') {
+    width: fit-content;
+    height: fit-content;
+    padding-bottom: 57px;
+  }
+
 }
 
 .contact__form-container {
   width: 520px;
   margin: 0 auto;
+
+  @include mq('sp') {
+    // width: 374px;
+    width: fit-content;
+    // background: mediumaquamarine;
+  }
 }
 
 .contact__form {
@@ -44,6 +57,12 @@
 .contact__input-container {
   display: flex;
   margin-bottom: 32px;
+
+  @include mq('sp') {
+    display: block;
+    // margin: 20px auto;
+    width: fit-content;
+  }
 }
 
 .contact__input-item {
@@ -57,6 +76,10 @@
   padding-top: 1rem;
   position: relative;
 
+  @include mq('sp') {
+    margin-bottom: 3px;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -67,6 +90,10 @@
     border-color: transparent transparent transparent #3EA1D1B3;
     top: 0;
     right: -10px;
+
+    @include mq('sp') {
+      content: none;
+    }
   }
 }
 
@@ -74,7 +101,7 @@
   color: #E7728E;
 }
 
-.contact_input-name {
+.contact__input-name {
 
 }
 
@@ -147,14 +174,56 @@
   }
 }
 
+// checkbox
 .contact__accept {
   width: fit-content;
   margin: 0 auto;
   margin-bottom: 51px;
 
   [type="checkbox"] {
-    // display: none;
-    border: $cl-main;
+    display: none;
+  }
+
+  [type="checkbox"]:checked + span {
+    
+    &::after {
+      display: block;
+    }
+  }
+
+  span {
+    // display: inline-block;
+    // padding-left: 49px;
+    position: relative;
+    
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 20px;
+      height: 20px;
+      background-color: white;
+      border: 1px solid $cl-main;
+      top: -3px;
+      left: -30px;
+    }
+
+    &::after {
+      display: none;
+      position: absolute;
+      content: "";
+      // width: 22px;
+      // height: 2px;
+      // background-color: $cl-main;
+      // transform: rotate(-45deg);
+
+      width: 30px;
+      height: 30px;
+      top: -6px;
+      left: -30px;
+
+      background: url(../img/checkbox_alt.png) no-repeat right 12px center / 17px 14px;
+    }
   }
 
   a {

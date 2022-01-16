@@ -1,0 +1,159 @@
+/* ==================================================
+break point for media query
+================================================== */
+.header {
+  height: 70px;
+}
+
+.header__container {
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  z-index: 100;
+}
+
+.header__inner-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+  .header__inner-container {
+    width: 100%;
+    display: block;
+  }
+}
+
+.header__site-title {
+  line-height: 70px;
+}
+
+@media (max-width: 767px) {
+  .header__site-title {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-left: 15px;
+  }
+}
+
+.header__site-title img {
+  width: 120px;
+  height: 21px;
+  vertical-align: middle;
+}
+
+.header__site-title:hover {
+  cursor: pointer;
+}
+
+.header__main-nav {
+  font-weight: 300;
+  line-height: 70px;
+  vertical-align: bottom;
+}
+
+@media (max-width: 767px) {
+  .header__main-nav {
+    display: none;
+  }
+}
+
+.header__main-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__main-nav ul li {
+  padding: 0px 24px;
+}
+
+.header__main-nav ul li:hover {
+  cursor: pointer;
+}
+
+.header__main-nav ul li a {
+  display: inline-block;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.header__main-nav ul li:hover a {
+  color: #3EA1D1;
+  opacity: .8;
+}
+
+.drawer-toggle span {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .drawer-toggle span {
+    display: block;
+  }
+}
+
+.drawer-hamburger {
+  padding-top: 30px;
+  padding-right: 30px;
+}
+
+.drawer-hamburger-icon {
+  width: 30px;
+  background-color: #3EA1D1;
+}
+
+.drawer-hamburger-icon::before {
+  background-color: #3EA1D1;
+}
+
+.drawer-hamburger-icon::after {
+  background-color: #3EA1D1;
+}
+
+.drawer--right.drawer-open .drawer-hamburger {
+  right: 0px;
+}
+
+.drawer-nav {
+  margin-top: 70px;
+  background: #3EA1D1;
+}
+
+.drawer-nav .drawer-brand {
+  font-size: 2rem;
+}
+
+.drawer-nav ul:first-child {
+  padding-top: 26px;
+}
+
+.drawer-nav ul li {
+  padding: 20px 15px;
+  border-bottom: 1px dashed #75b2c2;
+}
+
+.drawer-nav ul li a {
+  text-align: right;
+  color: #333;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.drawer-nav ul li a:hover {
+  color: #bcd8df;
+  text-decoration: none;
+}
+
+.expand-width {
+  width: 270px;
+}
+/*# sourceMappingURL=drawer-extra.css.map */

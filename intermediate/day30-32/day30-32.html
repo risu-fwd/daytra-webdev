@@ -7,6 +7,7 @@
   <!-- font awesome -->
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 
+  <link rel="icon" href="favicon.ico">
   <title>daily trial [web-dev] - intermediate | DAY30-32 </title>
   <style>
     @import url(css/reset.css);
@@ -14,13 +15,22 @@
   </style>
   <link rel="stylesheet" href="css/animate.css">
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
 
+  <!-- drawer.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css">
+  <!-- jquery & iScroll -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+  <!-- drawer.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
+
+  <!-- style.css -->
+  <link rel="stylesheet" href="css/drawer-extra.css">
 </head>
-<body>
-
+<body class="drawer drawer--right">
 <!-- section header -->
-  <section class="header">
+  <header class="header" role="banner">
     <div class="header__container">
       <div class="header__inner-container">
         <div class="header__site-title" onclick="reload()">
@@ -36,9 +46,28 @@
           </ul>
         </nav>
       </div>
-    </div>
-  </section>
 
+      <!-- drawer navigation -->
+      <button type="button" class="drawer-toggle drawer-hamburger">
+        <span class="sr-only">toggle navigation</span>
+        <span class="drawer-hamburger-icon"></span>
+      </button>
+      
+      <nav class="drawer-nav" role="navigation">
+        <ul class="drawer-menu">
+          <li><a class="drawer-menu-item" href="#concept">Concept</a></li>
+          <li><a class="drawer-menu-item" href="#feature">Feature</a></li>
+          <li><a class="drawer-menu-item" href="#products">Products</a></li>
+          <li><a class="drawer-menu-item" href="#news">News</a></li>
+          <li><a class="drawer-menu-item" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+
+
+
+  </header>
 <!-- section top -->
   <section class="top section">
     <div class="top__container inner wow fadeInUp">
@@ -122,13 +151,15 @@
       </div>
       <div class="feature__big-pic-container">
         <div class="feature__big-pic">
+        </div> 
+        <div class="feature__text-container">
           <p class="feature__main-text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, quis.
           </p>
           <p class="feature__sub-text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore pariatur eius laboriosam. Laborum obcaecati nisi cum molestias fugit ea alias repellendus expedita cumque magni pariatur, commodi animi quasi? Nemo natus maxime soluta dolorem vel. Error placeat optio soluta. A adipisci consequuntur iure recusandae ipsam, aperiam at enim laborum officiis. Aperiam.
           </p>
-        </div>  
+        </div>
       </div>
     </div>
   </section>
@@ -249,14 +280,16 @@
               </div>
             </div>
           </a>
-
-          <div class="btn-container">
-            <button class="btn">MORE</button>
-          </div>
         </div>
-      </div>
 
-      <div class="news__concept">
+        <div class="btn-container">
+          <button class="btn">MORE</button>
+        </div>
+
+      </div>
+      
+      <!-- current -->
+      <div class="news__concept-container">
         <div class="news__concept-desc">
           <div class="news__concept-main-text">
             Lorem ipsum dolor
@@ -282,7 +315,7 @@
       </div>
       <div class="contact__form-container">
         <form action="post" class="contact__form" onsubmit="return false;">
-          <p class="contact__note">&emsp; required input</p>
+          <p class="contact__note">&emsp; required field</p>
           <div class="contact__input-container">
             <div class="contact__input-item">Name<span class="required">*</span></div>
             <div class="contact__input-name">
@@ -297,7 +330,7 @@
           </div>
           <div class="contact__input-container">
             <div class="contact__input-item">Corporation/Private<span class="required">*</span></div>
-            <!-- radio -->
+            <!-- radio button -->
             <div class="contact__input-corp-or-not">
               <label><input type="radio" name="radio-contact" class="contact__corp-or-not" value="corp" checked><div class="radio-box">corp</div></label>
               <label><input type="radio" name="radio-contact" class="contact__corp-or-not" value="private"><div class="radio-box">private</div></label>
@@ -309,9 +342,11 @@
               <textarea name="" cols="30" rows="10" class="contact__detail" id="input-inqu"></textarea>
             </div>
           </div>
+          <!-- checkbox -->
           <div class="contact__accept">
-            <input type="checkbox">
-            <span>accept to <a href="">privacy/policy</a></span>
+            <input type="checkbox" id="check-contact">
+            <label for="check-contact">accept to <a href="" class="js-open-button" data-target=".target-modal">privacy/policy</a></label>
+            
           </div>
           <div class="btn-container">
             <input type="submit" class="contact__submit" value="SUBMIT" id="submit-btn" disabled>
@@ -353,11 +388,33 @@
           </div>
         </div>
         <div class="footer__copyright">
-          &copy; 2020 sobolon All rights reserved
+          &copy; 2022 sobolon All rights reserved
         </div>
       </div>
     </div>
   </footer>
+
+<!-- modal -->
+<div class="modal-contact target-modal">
+  <div class="modal-contact__head">Privacy Policy</div>
+  <div class="modal-contact__content">
+    <div class="modal-contact__sub-head">Lorem ipsum dolor sit amet.</div>
+    <div class="modal-contact__text">Lorem ipsum dolor sit, amet consectetur adipisicing  elit. Voluptates doloribus nobis necessitatibus repellendus, distinctio eum at saepe fugiat beatae? Praesentium facilis saepe labore modi deserunt numquam eum, debitis repellat? Voluptates.</div>
+    <div class="modal-contact__sub-head">Lorem ipsum dolor sit amet.</div>
+    <div class="modal-contact__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, magni voluptate laudantium nemo autem ratione eum minima asperiores corporis dolor atque repellat nesciunt at itaque quo pariatur? Ipsum, quaerat quis.</div>
+    <div class="modal-contact__sub-head">Lorem ipsum dolor sit amet.</div>
+    <div class="modal-contact__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, magni voluptate laudantium nemo autem ratione eum minima asperiores corporis dolor atque repellat nesciunt at itaque quo pariatur? Ipsum, quaerat quis.</div>
+    <div class="modal-contact__sub-head">Lorem ipsum dolor sit amet.</div>
+    <div class="modal-contact__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, magni voluptate laudantium nemo autem ratione eum minima asperiores corporis dolor atque repellat nesciunt at itaque quo pariatur? Ipsum, quaerat quis.</div>
+    <div class="modal-contact__sub-head">Lorem ipsum dolor sit amet.</div>
+    <div class="modal-contact__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, magni voluptate laudantium nemo autem ratione eum minima asperiores corporis dolor atque repellat nesciunt at itaque quo pariatur? Ipsum, quaerat quis.</div>
+    <div class="modal-contact__sub-head">Lorem ipsum dolor sit amet.</div>
+    <div class="modal-contact__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, magni voluptate laudantium nemo autem ratione eum minima asperiores corporis dolor atque repellat nesciunt at itaque quo pariatur? Ipsum, quaerat quis.</div>
+  </div>
+  <div class="modal-contact__button"><a href="" class="js-close-button" data-target=".target-modal">CLOSE</a></div>
+  <div class="modal-contact__icon"><a href="" class="js-close-button" data-target=".target-modal"><img src="img/btn-batsu.png" alt=""></a></div>
+</div>
+<div class="modal-contact-background target-modal"></div>
 
 <!-- JavaScript -->
   <script src="js/wow.min.js"></script>
