@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test position</title>
+
+  <style>
+    html {
+      font-size: 10px;
+    }
+
+    body {
+      font-size: 1.6rem;
+      background: #333;
+      color: #ddd;
+    }
+
+    .main {
+      width: 1000px;
+      height: 2000px;
+      background: gainsboro;
+      margin: 0 auto;
+
+      position: relative;
+      z-index: 1;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+    }
+    
+    .red {
+      position: absolute;
+      background: tomato;
+      top: 0;
+      left: 100px;
+      z-index: 10;
+    }
+
+    .blue {
+      position: absolute;
+      background: dodgerblue;
+      top: 50px;
+      left: 150px;
+      z-index: 11;
+    }
+
+    .inner-box {
+      width: 80px;
+      height: 80px;
+      background: lightsalmon;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="main">
+    <div class="box red"></div>
+    <div class="box blue">
+      <div class="inner-box"></div>
+    </div>
+    <div class="box green"></div>
+    <div class="box yellow"></div>
+    <div class="box purple"></div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex test</title>
+
+  <style>
+    body {
+      background: #333;
+      color: #ddd;
+    }
+
+    .main {
+      width: 800px;
+      height: 600px;
+      margin: 0 auto;
+      background: rgb(90, 90, 90);
+      border-radius: 2rem;
+
+      display: flex;
+      flex-wrap: nowrap;
+    }
+    
+    .box {
+      width: 300px;
+      height: 200px;
+      /* flex-grow: 1; */
+    }
+
+    .red {
+      background: tomato;
+      flex-shrink: 3;
+    }
+
+    .blue {
+      background: dodgerblue;
+      flex-shrink: 2;
+    }
+
+    .green {
+      background: mediumaquamarine;
+      flex-shrink: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <div class="box red"></div>
+    <div class="box blue"></div>
+    <div class="box green"></div>
+
+  </div>
+</body>
+</html>

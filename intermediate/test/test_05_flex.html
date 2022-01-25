@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex test [daytra day30-32]</title>
+
+  <style>
+    .wrap {
+      width: 30%;
+    }
+
+    .box {
+      padding-top: 56.25%;
+    }
+
+    .wrap .box {
+      background-color: tomato;
+    }
+
+    .box.w30 {
+      width: 30%;
+      background-color: dodgerblue;
+    }
+
+    .flex {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .flex .box {
+      background-color: mediumaquamarine;
+    }
+
+    body {
+      background-color: gainsboro;
+    }
+  </style>
+</head>
+<body>
+  <!-- ①.boxの親要素をwidth:30%するパターンA -->
+<div class="wrap">
+  <div class="box"></div>
+</div>
+
+<!-- ②.boxの親要素をwidth:30%するパターンB -->
+<div class="flex">
+  <div class="wrap">
+    <div class="box"></div>
+  </div>
+  <div class="wrap">
+    <div class="box"></div>
+  </div>
+  <div class="wrap">
+    <div class="box"></div>
+  </div>
+</div>
+ 
+<!-- ③.box自体をwidth:30%するパターン -->
+<div class="flex"> 
+  <div class="box w30"></div> 
+  <div class="box w30"></div> 
+  <div class="box w30"></div>
+</div>
+</body>
+</html>

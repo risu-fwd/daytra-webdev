@@ -1,0 +1,59 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+  background: #333;
+  background: white;
+  color: #ddd;
+  color: #333;
+}
+
+.main {
+  background: #555;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f3f3f3), color-stop(50%), to(#c5c5c5));
+  background: linear-gradient(#f3f3f3, 50%, #c5c5c5);
+  border-radius: 3rem;
+  width: 800px;
+  height: 600px;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding-top: 100px;
+}
+
+.arrow {
+  padding: 3rem;
+  border-radius: 3rem;
+  background-color: #b7e9d8;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  position: relative;
+}
+
+.arrow::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  background: url(https://note.spiqa.design/wp-content/uploads/2021/02/ico-check.png) center center no-repeat;
+  background-size: contain;
+  vertical-align: -1px;
+}
+
+.arrow::after {
+  content: '';
+  width: 20px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: url(../img/news-arrow.png) center center no-repeat;
+  background-size: contain;
+}
+/*# sourceMappingURL=image.css.map */

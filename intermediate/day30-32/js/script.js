@@ -3,9 +3,8 @@ $(function () {
   new WOW().init();
 
   // drawer
-  $(document).ready(function() {
-    $('.drawer').drawer();
-  });
+  $('.drawer').drawer();
+
 
   $('.drawer').drawer({
     class: {

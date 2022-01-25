@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="site summary">
+  <title>day33-37 | intermediate</title>
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <!--========== JavaScript ==========-->
+  <!-- JS libraries -->
+  <!-- jquery & iScroll -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+
+  <!-- drawer.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
+
+  <!--========== CSS ==========-->
+  <!-- reset.css -->
+  <link rel="stylesheet" href="css/reset.css">
+  <!-- drawer.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css">
+  <!-- animate.css -->
+  <link rel="stylesheet" href="css/animate.css">
+  <!-- style.css -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- font awesome -->
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body class="drawer drawer--right">
+  <header class="header inner">
+    <!-- primary navigation -->
+    <div class="header__wrapper">
+      <h1 class="is-sp header__comp-name">Sample Corp.</h1>
+      <nav class="header__nav">
+        <ul class="header__ul">
+          <li class="header__li"><a href="#news" >News</a></li>
+          <li class="header__li"><a href="#service" >Service</a></li>
+          <li class="header__li"><a href="#results" >Results</a></li>
+          <li class="header__li"><a href="#price" >Price</a></li>
+          <li class="header__li"><a href="#comments" >Comments</a></li>
+          <li class="header__li"><a href="#faqs" >FAQs</a></li>
+          <li class="header__li"><a href="#contact" >Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- drawer.js nav -->
+    <!-- button -->
+    <button type="button" class="drawer-toggle drawer-hamburger header__dr-btn">
+      <span class="sr-only">toggle navigation</span>
+      <span class="drawer-hamburger-icon"></span>
+    </button>
+
+    <!-- navigation -->
+    <nav class="drawer-nav header__dr-nav" role="navigation">
+      <ul class="drawer-menu header__dr-ul">
+        <li><a class="drawer-menu-item header__dr-li" href="#news">News</a></li>
+        <li><a class="drawer-menu-item header__dr-li" href="#service">Service</a></li>
+        <li><a class="drawer-menu-item header__dr-li" href="#results">Results</a></li>
+        <li><a class="drawer-menu-item header__dr-li" href="#price">Price</a></li>
+        <li><a class="drawer-menu-item header__dr-li" href="#comments">Comments</a></li>
+        <li><a class="drawer-menu-item header__dr-li" href="#faqs">FAQs</a></li>
+        <li><a class="drawer-menu-item header__dr-li" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- /.drawer.js -->
+  </header>
+
+  <main class="main">
+    <!-- Page content -->
+    <div class="top">
+      <div class="top__img-container"></div>
+      <div class="top__item-container">
+        <div class="top__text-container">
+          <p class="top__title">詩が生れて、画が出来る。<br>とかくに人の世は住みにくい。</p>
+          <p class="top__text">どこへ越しても住みにくいと悟った時、詩が生れて、<br class="is-sp">画が出来る。意地を<br class="is-pc">通せば窮屈だ。</p>
+        </div>
+        <div class="top__btn-container" id="top">
+          <button class="top__btn">お問い合わせしてみる</button>
+        </div>
+      </div>
+    </div><!-- /.top -->
+
+    <section class="news sec">
+      <div class="news__container inner">
+        <h2 class="util-title" id="news">News</h2>
+        <div class="news__item-container">
+
+          <div class="news__item">
+            <div class="news__item-inner">
+              <div class="news__item-day">
+                <p><time datetime="2020-02-01">2019-02-01</time></p>
+              </div>
+              <div class="news__item-title">
+                <h3>テキスト</h3>
+              </div>
+            </div>
+            <div class="news__item-text">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab tempore nam maiores nemo accusamus ipsa, enim amet repellat quaerat sit?</p>
+            </div>
+          </div>
+
+          <div class="news__item">
+            <div class="news__item-inner">
+              <div class="news__item-day">
+                <p><time datetime="2020-02-01">2019-02-01</time></p>
+              </div>
+              <div class="news__item-title">
+                <h3>テキスト</h3>
+              </div>
+            </div>
+            <div class="news__item-text">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae!</p>
+            </div>
+          </div>
+
+          <div class="news__item">
+            <div class="news__item-inner">
+              <div class="news__item-day">
+                <p><time datetime="2020-02-01">2019-02-01</time></p>
+              </div>
+              <div class="news__item-title">
+                <h3>テキスト</h3>
+              </div>
+            </div>
+            <div class="news__item-text">
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates!</p>
+            </div>
+          </div>
+
+        </div>
+        <div class="news__footer">
+          <button class="util-btn btn-white">MORE</button>
+        </div>
+
+      </div>
+    </section><!--/.news-->
+
+
+
+
+
+
+    <!-- <section class="service sec" id="service">
+
+      <div class="service__bg-box">
+        <h2 class="util-title">Service</h2>
+
+        <div class="service__item-container">
+
+          <div class="service__item">
+            <div class="service__item-img">
+              <img src="img/service1.png" alt="service1pict">
+            </div>
+            <p class="service__title">
+              WEB<br>DESIGN
+            </p>
+            <p class="service__text">
+              どこへ越しても住みにくいと悟った<br>
+              時、詩が生れて、画が出来る。意地<br>
+              を通せば窮屈だ。
+            </p>
+          </div>
+  
+          <div class="service__item">
+            <div class="service__item-img">
+              <img src="img/service2.png" alt="service1pict">
+            </div>
+            <p class="service__title">
+              WEB<br>CODING
+            </p>
+            <p class="service__text">
+              どこへ越しても住みにくいと悟った<br>
+              時、詩が生れて、画が出来る。意地<br>
+              を通せば窮屈だ。
+            </p>
+          </div>
+  
+          <div class="service__item">
+            <div class="service__item-img">
+              <img src="img/service3.png" alt="service1pict">
+            </div>
+            <p class="service__title">
+              CMS<br>CUSTOMIZE
+            </p>
+            <p class="service__text">
+              どこへ越しても住みにくいと悟った<br>
+              時、詩が生れて、画が出来る。意地<br>
+              を通せば窮屈だ。
+            </p>
+          </div>
+  
+  
+  
+        </div>
+      </div>
+
+
+    </section>/.service -->
+
+    <!-- <section class="results sec" id="results"></section>
+    <section class="price sec" id="price"></section>
+    <section class="comments sec" id="comments"></section>
+    <section class="faqs sec" id="faqs"></section>
+    <section class="contact sec" id="contact"></section> -->
+
+  </main>
+
+  <footer>
+
+  </footer>
+
+  <!-- script -->
+  <script src="js/wow.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

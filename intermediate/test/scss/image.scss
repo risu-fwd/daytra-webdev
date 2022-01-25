@@ -1,0 +1,63 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+  background: #333;
+  background: white;
+  color: #ddd;
+  color: #333;
+}
+
+.main {
+  background: #555;
+  background: linear-gradient(rgb(243, 243, 243), 50%, rgb(197, 197, 197));
+  border-radius: 3rem;
+  width: 800px;
+  height: 600px;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding-top: 100px;
+}
+
+.arrow {
+  padding: 3rem;
+  border-radius: 3rem;
+  background-color: rgb(183, 233, 216);
+  width: fit-content;
+  margin: 0 auto;
+  position: relative;
+
+  &::before {
+    // content: url(https://note.spiqa.design/wp-content/uploads/2021/02/ico-cehck-mini.png);
+    // display: inline-block;
+    // margin-right: 5px;  /*画像とテキスト間の余白を調整*/
+    // vertical-align: -1px; /*上下位置を調整*/
+
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    background: url(https://note.spiqa.design/wp-content/uploads/2021/02/ico-check.png) center center no-repeat;
+    background-size: contain;
+    vertical-align: -1px;
+  }
+
+  &::after {
+    content: '';
+    // display: block;
+    width: 20px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    background: url(../img/news-arrow.png) center center no-repeat;
+    background-size: contain;
+    // border-bottom: 2px solid dodgerblue;
+
+  }
+}
+
