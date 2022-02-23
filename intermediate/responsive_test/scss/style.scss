@@ -1,0 +1,328 @@
+@charset "utf-8";
+@import url(../css/reset.css);
+// =======================================================================
+// mixins
+// =======================================================================
+// define to mapped variable "breakpoints"
+$breakpoints: (
+  // key : value
+  'sm' : "screen and (max-width: 767px)",
+  'md' : "screen and (min-width: 768px)",
+  // 'lg' : 'screen and (min-width: 992px)',
+  // 'xl' : 'screen and (min-width: 1200px)'
+) !default;
+
+// preparing mixin for media query. default value is "md"
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+// =======================================================================
+// colors
+// =======================================================================
+$primary-color: #3EA1D1;
+$font-color: #333;
+
+// =======================================================================
+// common css
+// =======================================================================
+@include mq('sm') {
+  .is-pc {
+    display: none;
+  }
+}
+
+@include mq('md') {
+  .is-sp {
+    display: none;
+  }
+}
+
+// =======================================================================
+// base css
+// =======================================================================
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+  // background-color: #333;
+  background-color: white;
+  // color: gainsboro;
+  color:  $font-color;
+
+  font-family: "ヒラギノ明朝 ProN", serif;
+  line-height: 1.6875;
+}
+
+img {
+  @include mq(md) {
+    width: 100%;
+  }
+  
+  @include mq(sm) {
+    width: 80vw;
+  }
+}
+
+// ======================================================================
+// basic
+// ======================================================================
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+  background: gainsboro;
+}
+
+header, footer {
+  background: darkseagreen;
+  height: 100px;
+  width: 100%;
+}
+
+// .wrapper {
+//   width: 1000px;
+// }
+
+.sec {
+  max-width: 800px;
+  // width: 800px;
+  min-height: 200px;
+  
+  // height: 200px;
+  margin: 0 auto;
+
+  @include mq(sm) {
+    width: 100%;
+  }
+}
+
+
+// ======================================================================
+// header
+// ======================================================================
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  @include mq(sm) {
+    display: block;
+  }
+}
+
+.primary-nav {
+  margin-top: 2rem;
+  @include mq(sm) {
+    display: none;
+  }
+
+  ul {
+    display: flex;
+    list-style-type: none;
+    // line-height: 3rem;
+    height: 3rem;
+    background: aquamarine;
+
+    li {
+      background: dodgerblue;
+
+      a {
+        display: block;
+        height: 100%;
+        padding: 0 1rem;
+        &:hover {
+          background: tomato;
+          // opacity: 0.5;
+        }
+      }
+
+    }
+    li + li {
+      margin-left: 2rem;
+    }
+  }
+}
+
+.site-title {
+  margin-left: 2rem;
+  font-size: 4rem;
+  color: white;
+}
+
+.sec-title {
+  padding-top: 16px;
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+  line-height: 1;
+
+  &::after {
+    display: block;
+    content: "";
+    height: 1px;
+    width: 60px;
+    background: blue;
+    margin: 16px auto 16px;
+  }
+}
+
+
+// ======================================================================
+// top
+// ======================================================================
+.top {
+  background: lightsteelblue;
+}
+
+.top__container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  height: 200px;
+
+  @include mq(sm) {
+    position: static;
+    height: fit-content;
+  }
+}
+
+.top__message {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+
+  overflow: hidden;
+  // overflow: auto;
+  // overflow: scroll;
+  // overflow: visible;
+
+  width: 300px;
+  height: 100px;
+  // background: tomato;
+  padding: 1rem;
+
+  @include mq(sm) {
+    width: 100%;
+    position: static;
+    background: tomato;
+    // margin: 0 auto;
+  }
+}
+
+.top__image {
+  width: 100%;
+  height: 100%;
+  background: gray url(https://picsum.photos/seed/picsum/1200/900) no-repeat center center/cover;
+
+  @include mq(sm) {
+    height: 200px;
+  }
+}
+
+// ======================================================================
+// concept
+// ======================================================================
+.concept {
+  background: lightpink;
+}
+
+.concept__container {
+  display: flex;
+
+  @include mq(sm) {
+    display: block;
+  };
+}
+
+.concept__image {
+  flex: 0 0 50%;
+  img {
+    // width: 200px;
+  }
+
+  @include mq(sm) {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.concept__message {
+  flex: 0 1 50%;
+  // height: 100px;
+  background: aqua;
+  padding: 2rem;
+}
+
+// ======================================================================
+// feature
+// ======================================================================
+.feature {
+  background: mediumaquamarine;
+}
+
+.feature__container {
+  height: fit-content;
+}
+
+.feature__items {
+  display: flex;
+  justify-content: space-around;
+
+  @include mq(sm) {
+    display: block;
+  }
+
+}
+
+.feature__item {
+  flex: 0 0 30%;
+
+  & + & {
+    // margin-left: 10px;
+  }
+
+  @include mq(sm) {
+    width: 80%;
+    margin: 0 auto;
+
+    &:not(nth-child(3)) {
+      margin-bottom: 2rem;
+    }
+
+  }
+}
+
+.feature__item-pict {
+  // width: 100px;
+}
+
+.feature__item-desc {
+  text-align: center;
+}
+
+// ======================================================================
+// products
+// ======================================================================
+.products {
+  background: khaki;
+}
+
+.news {
+  background: plum;
+}
+
+.concept2 {
+  background: deepskyblue;
+}
+
+.contact {
+  background: palegreen;
+}
+

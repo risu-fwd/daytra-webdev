@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    body {
+      background: gainsboro;
+    }
+
+    .box {
+      width: 800px;
+      height: 200px;
+      margin: 0 auto;
+    }
+    
+    .red {
+      background: tomato;
+      position: absolute;
+    }
+
+    .blue {
+      background: dodgerblue;
+      position: absolute;
+      top: 200px;
+    }
+
+    .green {
+      background: mediumaquamarine;
+    }
+
+    .wrapper {
+      background: lemonchiffon;
+      width: 1000px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    @media (max-width: 767px) {
+      .red {
+        position: static;
+      }
+      .blue {
+        position: static;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="box red">
+      red
+    </div>
+
+    <section class="box blue">
+      blue
+    </section>
+
+    <div class="box green">
+      green
+    </div>
+  </div>
+</body>
+</html>

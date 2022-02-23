@@ -1,0 +1,286 @@
+@charset "UTF-8";
+@import url(../css/reset.css);
+@media screen and (max-width: 767px) {
+  .is-pc {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .is-sp {
+    display: none;
+  }
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: white;
+  color: #333;
+  font-family: "ヒラギノ明朝 ProN", serif;
+  line-height: 1.6875;
+}
+
+@media screen and (min-width: 768px) {
+  img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  img {
+    width: 80vw;
+  }
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+  background: gainsboro;
+}
+
+header, footer {
+  background: darkseagreen;
+  height: 100px;
+  width: 100%;
+}
+
+.sec {
+  max-width: 800px;
+  min-height: 200px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+  .sec {
+    width: 100%;
+  }
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    display: block;
+  }
+}
+
+.primary-nav {
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 767px) {
+  .primary-nav {
+    display: none;
+  }
+}
+
+.primary-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  height: 3rem;
+  background: aquamarine;
+}
+
+.primary-nav ul li {
+  background: dodgerblue;
+}
+
+.primary-nav ul li a {
+  display: block;
+  height: 100%;
+  padding: 0 1rem;
+}
+
+.primary-nav ul li a:hover {
+  background: tomato;
+}
+
+.primary-nav ul li + li {
+  margin-left: 2rem;
+}
+
+.site-title {
+  margin-left: 2rem;
+  font-size: 4rem;
+  color: white;
+}
+
+.sec-title {
+  padding-top: 16px;
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+  line-height: 1;
+}
+
+.sec-title::after {
+  display: block;
+  content: "";
+  height: 1px;
+  width: 60px;
+  background: blue;
+  margin: 16px auto 16px;
+}
+
+.top {
+  background: lightsteelblue;
+}
+
+.top__container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  height: 200px;
+}
+
+@media screen and (max-width: 767px) {
+  .top__container {
+    position: static;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+
+.top__message {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  overflow: hidden;
+  width: 300px;
+  height: 100px;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 767px) {
+  .top__message {
+    width: 100%;
+    position: static;
+    background: tomato;
+  }
+}
+
+.top__image {
+  width: 100%;
+  height: 100%;
+  background: gray url(https://picsum.photos/seed/picsum/1200/900) no-repeat center center/cover;
+}
+
+@media screen and (max-width: 767px) {
+  .top__image {
+    height: 200px;
+  }
+}
+
+.concept {
+  background: lightpink;
+}
+
+.concept__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width: 767px) {
+  .concept__container {
+    display: block;
+  }
+}
+
+.concept__image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}
+
+@media screen and (max-width: 767px) {
+  .concept__image img {
+    width: 100%;
+  }
+}
+
+.concept__message {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  background: aqua;
+  padding: 2rem;
+}
+
+.feature {
+  background: mediumaquamarine;
+}
+
+.feature__container {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.feature__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media screen and (max-width: 767px) {
+  .feature__items {
+    display: block;
+  }
+}
+
+.feature__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 30%;
+          flex: 0 0 30%;
+}
+
+@media screen and (max-width: 767px) {
+  .feature__item {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .feature__item:not(nth-child(3)) {
+    margin-bottom: 2rem;
+  }
+}
+
+.feature__item-desc {
+  text-align: center;
+}
+
+.products {
+  background: khaki;
+}
+
+.news {
+  background: plum;
+}
+
+.concept2 {
+  background: deepskyblue;
+}
+
+.contact {
+  background: palegreen;
+}
+/*# sourceMappingURL=style.css.map */

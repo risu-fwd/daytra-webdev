@@ -1,0 +1,1 @@
+/Users/mac/Desktop/daytra/advanced/php/dev/wp-content/plugins/query-monitor/wp-content/db.php

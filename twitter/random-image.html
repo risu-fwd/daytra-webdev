@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>random image output by JS</title>
+  
+  <style>
+    .random-img {
+      background: #eee;
+      border-radius: 1rem;
+      padding: 1rem;
+      width: 200px;
+      height: 200px;
+      margin: 8rem auto 0;
+    }
+
+    .random-img img {
+      border-radius: 1rem;
+    }
+
+    .btn-wrapper {
+      margin: 2rem auto 0;
+      width: fit-content;
+    }
+
+    .btn {
+      padding: 1rem;
+      border: none;
+      border-radius: 1rem;
+      color: white;
+      font-size: 2rem;
+      box-shadow: 0px 2px 2px gray;
+    }
+
+    .btn:active {
+      transform: translate(0, 2px);
+      color: yellow;
+      box-shadow: none;
+    }
+
+    .green {
+      background: mediumaquamarine;
+    }
+
+    .blue {
+      background: dodgerblue;
+    }
+
+    .btn-disable {
+      background: gainsboro;
+    }
+
+    .img-list {
+      width: fit-content;
+      margin: 100px auto 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="random-img" id="random-img">
+    <!-- ここに画像を出力 -->
+  </div>
+
+  <!-- ボタンを表示 -->
+  <div class="btn-wrapper"> 
+    <button class="btn green" id="some-btn" onclick="displayRandomImg()">click me!</button>
+    <button class="btn blue" onclick="location.reload()">reload!</button>
+  </div>
+
+  <div class="img-list" id="some-img-list">
+    <!-- ここに画像一覧を表示 -->
+  </div>
+
+
+
+<!-- 以下JavaScript -->
+<script>
+  // helper
+  function log(args) {
+    console.log(args);
+  }
+
+  // 画像の用意（Lorem Picsumより取得 https://picsum.photos/）
+  let imgArr = [
+    "https://picsum.photos/200/140", // imgArr[0] ・・・ 0番目の画像のURL
+    "https://picsum.photos/200/150", // imgArr[1] ・・・ 1番目の画像のURL
+    "https://picsum.photos/200/160", // imgArr[2] ・・・ 2番目の画像のURL
+    "https://picsum.photos/200/170", // imgArr[3] ・・・ 3番目の画像のURL
+    "https://picsum.photos/200/180", // imgArr[4] ・・・ 4番目の画像のURL
+    "https://picsum.photos/200/190", // imgArr[5] ・・・ 5番目の画像のURL
+    "https://picsum.photos/200/200", // imgArr[6] ・・・ 6番目の画像のURL
+  ];
+
+  let imgArrLen = imgArr.length; // 画像の数を取得
+  let displayedImg = []; // 表示済み画像のインデックスを格納する配列を用意
+  let img_container = document.getElementById("random-img"); // 画像を表示する場所の取得
+  let clickCount = imgArrLen; // 画像の枚数分はボタンクリック可能にするため押した回数を格納する変数を宣言
+
+  displayImgList(); // 画面下部に画像一覧を表示
+
+  // 画像を配列(imgArr)からランダムに取得し表示する関数
+  function displayRandomImg() {
+    while(true) { // まだ表示されていないなら以下を繰り返し
+      let randomIndex = Math.floor(Math.random() * imgArrLen); // 画像のインデックスをランダムに取得（少数点以下は切り捨て）
+
+      // ランダムに取得したインデックスが表示済みのインデックスでなければ以下を実行
+      // ランダムに取得したインデックスが表示済みのインデックスだった場合再度whileループに戻る
+      // そのため表示済みの画像は表示されない
+      if(!displayedImg.includes(randomIndex)){ 
+        deleteElement(); // 表示済みの画像とNo.を削除
+
+        let dom_img = document.createElement('img'); // 以下6行で画像の表示
+        dom_img.id = "child-pic";
+        dom_img.src = imgArr[randomIndex];
+        dom_img.style.width = '200px';
+        dom_img.style.height = '200px';
+        img_container.appendChild(dom_img);
+
+        displayedImg.push(randomIndex); // 表示した画像のインデックスを表示済み配列に格納
+        log("displayedImg: " + displayedImg); // 表示済みインデックス一覧をコンソールに表示
+
+        let dom_num_arr = document.createElement('p'); // 以下4行で表示済みインデックス一覧を表示
+        dom_num_arr.id = "child-num-arr";
+        dom_num_arr.innerHTML = displayedImg;
+        img_container.appendChild(dom_num_arr);
+
+        clickCount--; // クリックできる回数を1つ減らす
+        log('clickCount: ' + clickCount); // クリック可能回数をコンソールに表示
+
+        if(clickCount === 0){ // クリックできる回数0でボタンを非活性化
+          document.getElementById('some-btn').setAttribute("disabled", true);
+          document.getElementById('some-btn').classList.add('btn-disable');
+        }
+
+        break; // 画像が表示できたらwhileループを抜ける
+     }
+    }
+  }
+
+  // 表示されている画像と表示済み画像No.を削除
+  // これがないと画像と表示済みNo.がどんどん画面に追加されていく
+  function deleteElement() {
+    let flg1 = !!document.getElementById('child-pic');
+    if(flg1) img_container.removeChild(document.getElementById('child-pic'));
+    let flg2 = !!document.getElementById('child-num-arr');
+    if(flg2) img_container.removeChild(document.getElementById('child-num-arr'));
+  }
+
+  // 最初に取得した画像一覧を画面に表示
+  function displayImgList() {
+    let img_list = document.getElementById("some-img-list");
+    imgArr.forEach(
+      function (url) {
+        let dom_img = document.createElement('img');
+        dom_img.src = url;
+        dom_img.style.width = '80px';
+        dom_img.style.height = '80px';
+        img_list.appendChild(dom_img);
+      }
+    )
+  }
+</script>
+</body>
+</html>
